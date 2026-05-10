@@ -1,0 +1,154 @@
+$primaryColor: #4527a4;
+
+.bBlocksInspectorInfo {
+  padding: 6px;
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+.ctrbCounters__help {
+  color: #777;
+}
+
+.clipBtnWrapper {
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0px !important;
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  button {
+    border: none;
+    background: rgb(69, 39, 164);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: rgb(69, 39, 164);
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+
+
+/* ===============================
+   Theme Switcher 
+================================= */
+
+/* Popover container */
+.bpl_theme_picker_popover {
+  padding: 16px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12),
+    0 2px 6px rgba(0, 0, 0, 0.05);
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+
+    .theme-card {
+      cursor: pointer;
+      border-radius: 12px;
+      padding: 12px 10px 10px;
+      background: linear-gradient(180deg, #ffffff, #f9fafb);
+      border: 1px solid transparent;
+      transition: all 0.25s ease;
+      text-align: center;
+      position: relative;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+      }
+
+      &.active {
+        border-color: #2563eb;
+        background: linear-gradient(180deg, #f0f7ff, #ffffff);
+        box-shadow:
+          0 0 0 2px rgba(37, 99, 235, 0.25),
+          0 10px 22px rgba(37, 99, 235, 0.15);
+      }
+
+      .theme-preview {
+        height: 40px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        padding: 8px;
+        margin-bottom: 8px;
+
+        .preview-bar {
+          height: 6px;
+          border-radius: 6px;
+          background: #9ca3af;
+          opacity: 0.9;
+          &.small {
+            width: 65%;
+          }
+        }
+      }
+
+      .theme-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #1f2937;
+        min-width: 80px;
+      }
+    }
+  }
+}
+
+.bpl_theme_picker {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+  // theme button
+  &-btn {
+    position: relative;
+    &.active {
+      background: #4527a4;
+      color: #fff;
+    }
+  }
+}
+
+// Info Note
+.offcanvas-block-info-note {
+  padding: 12px 14px;
+  background: #f0f6fc;
+  border-left: 4px solid #2271b1;
+  font-size: 13px;
+  border-radius: 4px;
+  line-height: 1.5;
+  margin: 10px 0 !important;
+  display: block;
+  strong {
+    display: block;
+    margin: 4px 0;
+    color: #2271b1;
+  }
+}

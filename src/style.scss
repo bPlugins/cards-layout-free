@@ -1,0 +1,274 @@
+:root {
+  --brand-1: #6366f1;
+  --brand-2: #8b5cf6;
+  --brand-3: #06b6d4;
+  --green: #10b981;
+  --orange: #f59e0b;
+  --red: #ef4444;
+  --dark: #0f0f17;
+  --surface: #16161f;
+  --card-bg: #1c1c28;
+  --card-border: #ffffff12;
+  --text-primary: #f1f1f8;
+  --text-secondary: #9191a8;
+  --text-muted: #5a5a72;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+}
+
+.wp-block-phclb-cards-layout {
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h2,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .phclbCardsLayoutBlock {
+    .cardMainArea {
+      a {
+        text-decoration: none;
+      }
+
+      display: grid;
+
+      .singleCard {
+        // base card style start
+        .phclb-card {
+          position: relative;
+          overflow: hidden;
+          transition:
+            transform 0.2s ease,
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
+
+          &:hover {
+            transform: translateY(-3px);
+            border-color: rgba(99, 102, 241, 0.25);
+          }
+
+          .card-icon-wrap {
+          
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            padding: 8px;
+
+            svg {
+              fill: currentColor;
+              stroke: currentColor;
+            }
+          }
+
+          .card-tag {
+           
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+          }
+
+          .card-tag::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            background: var(--brand-1);
+            border-radius: 50%;
+          }
+        }
+
+        // base card style end
+        .img {
+          width: 100%;
+          height: 200px;
+          background-size: cover;
+          background-position: center;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .title {
+          margin-top: 10px;
+        }
+
+
+        .desc {
+          margin-top: 5px;
+        }
+
+        .btnArea {
+          margin-top: 15px;
+
+          a {
+            display: inline-block;
+          }
+        }
+      }
+
+      .feature-card {
+        .card-glow {
+          position: absolute;
+          top: -40px;
+          right: -40px;
+          width: 120px;
+          height: 120px;
+          background: radial-gradient(
+            circle,
+            rgba(99, 102, 241, 0.15) 0%,
+            transparent 70%
+          );
+          pointer-events: none;
+        }
+      }
+
+      .hero-feature-card {
+        .hero-img {
+          height: 200px;
+          position: relative;
+          overflow: hidden;
+          flex-shrink: 0;
+
+          .img-overlay {
+            position: absolute;
+            inset: 0;
+          }
+
+          .img-pattern {
+            position: absolute;
+            inset: 0;
+          }
+
+          .badge-float {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+
+            backdrop-filter: blur(8px);
+          }
+
+          .stat-float {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+
+            backdrop-filter: blur(12px);
+
+            .lbl {
+              margin-top: 2px;
+            }
+          }
+        }
+
+        .hero-body {
+          padding: 24px 28px 28px;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+
+
+
+      .singleCard .phclb-card.achievement-card .card-icon-wrap {
+        margin: 0;
+      }
+
+      .achievement-card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .ach-badge {
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 16px;
+          position: relative;
+    
+
+          &::after {
+            content: "";
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            animation: spin 20s linear infinite;
+          
+          }
+        }
+
+        .ach-title {
+          margin-bottom: 6px;
+        }
+        .title {
+          margin: 0;
+        }
+
+        .ach-value {
+          margin-bottom: 8px;
+        }
+      }
+
+
+      // animation
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+    }
+  }
+
+  .icon {
+    font-style: inherit;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/*
+*
+*column set
+*/
+@for $i from 1 through 12 {
+  .columns-#{$i} {
+    grid-template-columns: repeat(#{$i}, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  @for $i from 1 through 12 {
+    .columns-tablet-#{$i} {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  @for $i from 1 through 12 {
+    .columns-mobile-#{$i} {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+  }
+}
