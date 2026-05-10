@@ -42,7 +42,7 @@ const Edit = (props) => {
         }}
       />
 
-      {postType == "cards-layout" && (
+      {postType === "cards-layout" && (
         <ClipBoard shortcode={`[${postType} id=${postId}]`} />
       )}
 

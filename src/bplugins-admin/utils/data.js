@@ -1,7 +1,7 @@
 const slug = "cards-layout";
 
 export const dashboardInfo = (info) => {
-  const { version, isPremium, hasPro, licenseActiveNonce } = info;
+  const { version, isPremium, licenseActiveNonce } = info;
 
   const proSuffix = isPremium ? " Pro" : "";
 

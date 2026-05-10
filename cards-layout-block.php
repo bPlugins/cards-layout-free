@@ -4,20 +4,28 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
-if (!class_exists('PHCLBBlock')) {
-    class PHCLBBlock
-    {
-        function __construct()
-        {
-            add_action('init', [$this, 'onInit']);
-        }
+/**
+ * Block registration handler for Cards Layout.
+ *
+ * @package CardsLayout
+ */
+if ( ! class_exists( 'PHCLBBlock' ) ) {
+	class PHCLBBlock {
+		/**
+		 * Constructor.
+		 */
+		public function __construct() {
+			add_action( 'init', array( $this, 'onInit' ) );
+		}
 
-
-
-        function onInit()
-        {
-            register_block_type(__DIR__ . '/build');
-        }
-    }
-    new PHCLBBlock();
+		/**
+		 * Register the block type on init.
+		 *
+		 * @return void
+		 */
+		public function onInit() {
+			register_block_type( __DIR__ . '/build' );
+		}
+	}
+	new PHCLBBlock();
 }

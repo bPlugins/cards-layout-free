@@ -83,10 +83,23 @@ if (!class_exists('PHCLBPlugin')) {
 			}
 		}
 
-		function phclbDisplayContent($post)
+		/**
+		 * Render the content of a cards-layout post.
+		 *
+		 * @param WP_Post $post Post object.
+		 * @return string Rendered content.
+		 */
+		function phclbDisplayContent($post): string
 		{
-			$content = apply_filters('the_content', $post->post_content);
-			return $content;
+			// Avoid apply_filters('the_content') to prevent infinite loops if the shortcode is used within itself.
+			// Instead, parse blocks and handle shortcodes manually.
+			$content = $post->post_content;
+
+			if (function_exists('do_blocks')) {
+				$content = do_blocks($content);
+			}
+
+			return do_shortcode($content);
 		}
 	}
 }
