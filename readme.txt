@@ -18,6 +18,9 @@ Cards Elements is a powerful and flexible WordPress Gutenberg block plugin desig
 
 Whether you need to highlight core features, showcase team profiles, display achievement metrics, or present your skill progress, Cards Elements provides a rich set of beautifully crafted, responsive components to elevate your website's design.
 
+
+[**Cards Layout**](https://bplugins.com/products/cards-layout/) | [**Pricing**](https://bplugins.com/products/cards-layout/pricing) | [**Support**](https://bplugins.com/support/) | [**Demos**](https://bplugins.com/products/cards-layout/#demos)
+
 = 🚀 Features =
 * **Default Card:** The perfect minimal card for general content, featuring image, title, description, and button controls.
 
@@ -45,6 +48,19 @@ Unlock the full potential of Cards Layout with our Premium layouts designed for 
 
 * **Creative Curve Card:** A highly stylized layout with a seamless CSS-curve cutout connecting your icon to your text content.
 * **Feature Card:** Premium, sleek layout for displaying software or service features.
+
+
+= Source Code =
+
+The source code for all generated build assets is publicly available here: [**https://github.com/bPlugins/cards-layout**](https://github.com/bPlugins/cards-layout-free)
+
+= This repository includes: =
+– Original source files
+– Build configuration
+– Development workflow
+– Asset generation process
+
+
 
 
 = How to Use =
@@ -134,15 +150,15 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
-= 2.0.2 - 10 May, 2026 =
+= 2.0.2 – 10 May, 2026 =
 * Compliance update: Removed all gated features and trialware logic.
 * Enhanced block stability and settings panel.
 
-= 2.0.1 - 26 April, 2026 =
+= 2.0.1 – 26 April, 2026 =
 * Enhanced block title for clearer identification.
 * Improved user interface for better accessibility.
 
-= 2.0.0 - 21 April, 2026 =
+= 2.0.0 – 21 April, 2026 =
 * Major Release: Introducing a new layout engine!
 * New Layouts: Hero Feature Card, Achievement Card, Feature Card.
 * Added Responsive Grid Engine for Desktop, Tablet, and Mobile column controls.
@@ -151,19 +167,19 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Added customizable badge animation speed for Achievement Card.
 * Codebase optimization and bug fixes.
 
-= 1.1.4 - 29 July, 2025 =
+= 1.1.4 – 29 July, 2025 =
 * focalPoint added good feature;
 
-= 1.1.3 - 27 July, 2025 =
+= 1.1.3 – 27 July, 2025 =
 * Import content from image media;
 
-= 1.1.2 - 9 July, 2025 =
+= 1.1.2 – 9 July, 2025 =
 * Image border radius and card content align option added
 
-= 1.1.1 - 6 July, 2025 =
+= 1.1.1 – 6 July, 2025 =
 * Card URL and button URL now open in a new tab;
 
-= 1.1.0 - 4 July, 2025 =
+= 1.1.0 – 4 July, 2025 =
 * Default layout available
 * Set card border, padding, and border radius
 * Customize card title, description, and button typography, color, padding, and border radius
@@ -174,32 +190,32 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Upgrade Notice ==
 
-= 2.0.2 - 10 May, 2026 =
+= 2.0.2 – 10 May, 2026 =
 * Compliance update for WordPress.org directory.
 
-= 2.0.1 - 26 April, 2026 =
+= 2.0.1 – 26 April, 2026 =
 * Enhanced block title for clearer identification.
 
-= 2.0.0 - 21 Apr 2026 =
+= 2.0.0 – 21 Apr 2026 =
 * Major release: Cards Layout Pro with SaaS-style layouts. 
 * New free layouts: Hero Feature, Achievement. 
 * New Pro layouts: Progress, Banner, Feature & more.
 * Added responsive grid engine, icon wrap sizing, card tags, badge animation controls, optimizations & fixes.
 
 
-= 1.1.4 - 29 July, 2025 =
+= 1.1.4 – 29 July, 2025 =
 * focalPoint added good feature;
 
-= 1.1.3 - 27 July, 2025 =
+= 1.1.3 – 27 July, 2025 =
 * Import content from image media;
 
-= 1.1.2 - 9 July, 2025 =
+= 1.1.2 – 9 July, 2025 =
 * Image border radius and card content align option added
 
-= 1.1.1 - 6 July, 2025 =
+= 1.1.1 – 6 July, 2025 =
 * Card URL and button URL now open in a new tab;
 
-= 1.1.0 - 4 July, 2025 =
+= 1.1.0 – 4 July, 2025 =
 * Default layout available
 * Set card border, padding, and border radius
 * Customize card title, description, and button typography, color, padding, and border radius
