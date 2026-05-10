@@ -18,7 +18,7 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
  * 1. Delete all 'cards-layout' custom posts.
  */
 
-$cards = get_posts(
+$PHCLB_cards = get_posts(
 	array(
 		'post_type'      => 'cards-layout',
 		'post_status'    => 'any',
@@ -27,9 +27,9 @@ $cards = get_posts(
 	)
 );
 
-if ( ! empty( $cards ) ) {
-	foreach ( $cards as $card_id ) {
-		wp_delete_post( $card_id, true );
+if ( ! empty( $PHCLB_cards ) ) {
+	foreach ( $PHCLB_cards as $PHCLB_card_id ) {
+		wp_delete_post( $PHCLB_card_id, true );
 	}
 }
 

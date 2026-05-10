@@ -4,16 +4,6 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-add_action('plugins_loaded', 'phclb_load_textdomain');
-
-function phclb_load_textdomain()
-{
-	load_plugin_textdomain(
-		'cards-layout',
-		false,
-		dirname(plugin_basename(PHCLB_PLUGIN_FILE)) . '/languages'
-	);
-}
 
 
 /**

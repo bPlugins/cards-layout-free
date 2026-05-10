@@ -3,7 +3,7 @@
   "apiVersion": 3,
   "name": "phclb/cards-layout",
   "version": "2.0.2",
-  "title": "Cards Elements",
+  "title": "Cards Layout",
   "category": "widgets",
   "description": "This plugin offers multiple customizable layouts like grid, list, and carousel, making content display easy and flexible.",
   "keywords": [

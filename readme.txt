@@ -1,9 +1,9 @@
-=== Cards Elements ===
+=== Cards Layout ===
 Contributors: bplugins, abuhayat, asadsuzan, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: cards, layout, content, gallery, lightbox
 Requires at least: 6.5
-Tested up to: 6.7
+Tested up to: 6.9
 Stable tag: 2.0.2
 Requires PHP: 7.1
 License: GPLv3 or later
@@ -180,15 +180,12 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 = 2.0.1 - 26 April, 2026 =
 * Enhanced block title for clearer identification.
 
-= 2.0.0 - 21 April, 2026 =
-* Major Release: Introducing Cards Layout Pro with Premium SaaS-style layouts!
-* New Free Layouts: Hero Feature Card, Achievement Card.
-* New Pro Layouts: State / Counter Card, Progress Card, Animated Service Card, Banner Card, Client Logo Card, Creative Curve Card, Feature Card.
-* Added Responsive Grid Engine for Desktop, Tablet, and Mobile column controls.
-* Added granular Icon Wrap Size controls for independent scaling.
-* Added dynamic Card Tags across multiple layouts.
-* Added customizable badge animation speed for Achievement Card.
-* Codebase optimization and bug fixes.
+= 2.0.0 - 21 Apr 2026 =
+* Major release: Cards Layout Pro with SaaS-style layouts. 
+* New free layouts: Hero Feature, Achievement. 
+* New Pro layouts: Progress, Banner, Feature & more.
+* Added responsive grid engine, icon wrap sizing, card tags, badge animation controls, optimizations & fixes.
+
 
 = 1.1.4 - 29 July, 2025 =
 * focalPoint added good feature;
