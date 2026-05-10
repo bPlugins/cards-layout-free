@@ -16,6 +16,7 @@ import {
   pxUnit,
 } from "../../../../../../../bpl-tools/utils/options";
 import { themeSwitch } from '../../../../../utils/functions';
+import { PremiumPanel } from '../../../../../../../bpl-tools/ProControls';
 
 
 const Layout = ({ attributes, setAttributes }) => {
@@ -35,7 +36,7 @@ const Layout = ({ attributes, setAttributes }) => {
       <PanelBody
         className="phPanelBody"
         title={__("Layout", "cards-layout")}
-        initialOpen={false}
+        initialOpen={true}
       >
         <SelectControl
           className="mt10"
@@ -47,7 +48,12 @@ const Layout = ({ attributes, setAttributes }) => {
             setAttributes(themeSwitch(val, attributes));
           }}
         />
-
+        <PremiumPanel
+          title={__('Premium Layouts', 'cards-layout')}
+          description={__('Get access to 6 more layouts.', 'cards-layout')}
+          pricingUrl="https://bplugins.com/products/cards-layout/pricing/"
+          demoUrl="https://bplugins.com/products/cards-layout/#demos" // Optional
+        />
         <PanelRow>
           <Label mt="0">{__("Columns:", "cards-layout")}</Label>
           <BDevice device={device} onChange={(val) => setDevice(val)} />
@@ -83,6 +89,10 @@ const Layout = ({ attributes, setAttributes }) => {
           units={[pxUnit(40), perUnit(3), emUnit(2.5)]}
           isResetValueOnUnitChange={true}
         />
+
+
+
+
       </PanelBody>
     </>
   );

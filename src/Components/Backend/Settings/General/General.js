@@ -3,6 +3,7 @@ import Panel from "./Panel/Panel";
 import Default from "./Layouts/Default";
 import HeroFeatureCard from "./Layouts/HeroFeatureCard";
 import CardTag from './Element/CardTage';
+import { AdvertiseCard } from '../../../../../../bpl-tools/ProControls';
 
 
 const General = ({
@@ -51,6 +52,8 @@ const General = ({
         )
       }
 
+
+      <AdvertiseCard isPremium={false} planLink={'https://bplugins.com/products/cards-layout/pricing'} />
 
 
     </>

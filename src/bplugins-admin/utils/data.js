@@ -61,6 +61,17 @@ export const dashboardInfo = (info) => {
         ],
       },
     ],
+    proFeatures: [
+      "Unlock 7 Premium SaaS-style layouts",
+      "State / Counter Card with sparkline graphs",
+      "Progress Card with customizable gradient bars",
+      "Animated Service Card with glowing borders",
+      "Banner Card with glassmorphism blur effects",
+      "Client Logo Card with specialized typographic layouts",
+      "Creative Curve Card with seamless CSS cutouts",
+      "Sleek Feature Card for software/service display",
+      "Priority customer support and premium updates",
+    ],
     startButton: {
       label: "Start Now",
       url: `wp-admin/post-new.php?post_type=cards-layout`,
@@ -69,6 +80,8 @@ export const dashboardInfo = (info) => {
 };
 
 export const demoInfo = {
+  // allInOneLabel: 'See All Demos',
+  // allInOneLink: 'https://apb.bplugins.com/all-demos-in-one-place/',
   demos: [
     {
       icon: "",
@@ -102,7 +115,68 @@ export const demoInfo = {
       type: "iframe",
       url: "https://bblockswp.com/demo/cards-layout-feature-card/",
     },
-  ],
-};
+    {
+      icon: "",
+      title: "State / Counter Card (Pro)",
+      description: "Showcase key metrics with a modern twist. This layout features a prominent number, a subtle sparkline graph, and a clear label. Ideal for dashboards, analytics, and performance highlights.",
+      category: "",
+      type: "iframe",
+      url: "https://bblockswp.com/demo/cards-layout-state-card/",
+    },
+    {
+      icon: "",
+      title: "Progress Card (Pro)",
+      description: "Visualize progress with sleek, customizable progress bars. This layout is perfect for showing project completion, skill levels, or any metric that benefits from a clear visual scale.",
+      category: "",
+      type: "iframe",
+      url: "https://bblockswp.com/demo/cards-layout-progress-card/",
+    },
+    {
+      icon: "",
+      title: "Animated Service Card (Pro)",
+      description: "A dynamic card layout that brings your content to life with subtle animations. Perfect for service-based businesses or feature highlights where movement draws attention.",
+      category: "",
+      type: "iframe",
+      url: "https://bblockswp.com/demo/cards-layout-animated-service-card/",
+    },
+    {
+      icon: "",
+      title: "Banner Style Card (Pro)",
+      description: "A bold, full-width banner-style card designed to grab attention. Ideal for promotions, announcements, or featured content that needs to stand out.",
+      category: "",
+      type: "iframe",
+      url: "https://bblockswp.com/demo/cards-layout-banner-style-card/",
+    },
 
-export const pricingInfo = {};
+    {
+      icon: "",
+      title: "Client Logo Card (Pro)",
+      description: "A clean, professional layout perfect for showcasing client logos or partner brands. Features a prominent image area and structured text blocks for company names and descriptions.",
+      category: "",
+      type: "iframe",
+      url: "https://bblockswp.com/demo/cards-layout-client-logo-card/",
+    },
+    {
+      icon: "",
+      title: "Creative Curve Card (Pro)",
+      description: "A visually striking card layout featuring a unique curved cutout design element. This layout adds a modern and creative flair, perfect for portfolios, design agencies, or any brand wanting to stand out.",
+      category: "",
+      type: "iframe",
+      url: "https://bblockswp.com/demo/cards-layout-creative-curve-card/",
+    },
+  ],
+}
+
+export const pricingInfo = {
+  logo: `https://ps.w.org/${slug}/assets/icon-128x128.png`, // Optional
+  pluginId: 27207,
+  planId: 44997,
+  licenses: [1, 3, null],
+  button: {
+    label: "Buy Now ➜",
+  },
+  featured: {
+    selected: 3, // choose from licenses item
+    text: "Best Value",
+  },
+};
