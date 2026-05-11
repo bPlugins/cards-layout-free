@@ -62,7 +62,6 @@ The source code for all generated build assets is publicly available here: [**ht
 
 
 
-
 = How to Use =
 
 1. Install and activate the **Cards Elements** plugin.
@@ -151,8 +150,20 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 == Changelog ==
 
 = 2.0.2 – 10 May, 2026 =
-* Compliance update: Removed all gated features and trialware logic.
-* Enhanced block stability and settings panel.
+
+* Removed all Freemius-based feature gating and premium license checks from the plugin codebase.
+* Removed locked/blurred Pro-only layouts and any restricted built-in functionality to comply with WordPress.org Guideline #5 (Trialware).
+* Removed `PHCLB_HAS_PRO`, `cl_fs()->can_use_premium_code()`, and related conditional premium access logic.
+* Cleaned block editor, admin dashboard, and frontend UI from upgrade-lock states and restricted feature handling.
+* Updated plugin architecture to ensure all included features are fully functional without license activation.
+* Added publicly accessible source code references and development documentation in the plugin readme.
+* Included documentation for build tools and asset generation workflow for JavaScript/CSS files.
+* Ensured generated assets in `/build` have corresponding human-readable source files available.
+* Improved plugin compliance with WordPress.org Guideline #4 (Human Readable Code).
+* Performed a full plugin audit for WordPress coding standards, security, and repository compliance.
+* Tested plugin on a clean WordPress installation with `WP_DEBUG` enabled.
+* General code cleanup, optimization, and maintenance improvements.
+
 
 = 2.0.1 – 26 April, 2026 =
 * Enhanced block title for clearer identification.
