@@ -105,34 +105,34 @@ https://wordpress.org/support/plugin/cards-layout-free/
 
 This plugin utilizes external services to provide optional diagnostic tracking and support. These services are only active if you explicitly opt-in via the activation screen.
 
-1. = bPlugins API =
-   * **Service URL:** [https://api.bplugins.com](https://api.bplugins.com)
-   * **Purpose:** The plugin's admin dashboard fetches product comparison data and pricing information to display relevant upgrade options and feature details.
-   * **Data Sent:** Only the plugin slug is transmitted; no personal or site data is collected.
-   * **Terms of Service:** [https://bplugins.com/terms-of-service/](https://bplugins.com/terms-of-service/)
-   * **Privacy Policy:** [https://bplugins.com/privacy-policy/](https://bplugins.com/privacy-policy/)
-
-2. = WordPress.org Plugins API =
-   * **Service URL:** [https://api.wordpress.org/plugins/info/1.2/](https://api.wordpress.org/plugins/info/1.2/)
-   * **Purpose:** The admin dashboard queries the official WordPress.org Plugins API to retrieve and display a curated list of other plugins by the same author ("Our Plugins" section).
-   * **Data Sent:** Plugin slugs and author name; no personal or site data is collected.
-   * **Terms of Service:** [https://wordpress.org/about/tos/](https://wordpress.org/about/tos/)
-   * **Privacy Policy:** [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
-
-3. = Freemius =
+1. = Freemius =
    * **Endpoint:** https://wp.freemius.com/action/service/user/install/
    * **Data Sent:** Site URL, WordPress version, PHP version, locale, plugin version, site name, and user email/name (if provided).
    * **Purpose:** Handles the opt-in process and synchronization of user/site data for support and updates.
    * **Terms of Service:** https://freemius.com/terms/
    * **Privacy Policy:** https://freemius.com/privacy/
 
-4. = ImgBB (External Image Hosting) =
+2. = ImgBB (External Image Hosting) =
    * **Endpoint:** https://i.ibb.co/
    * **Data Sent:** None (External resource request only).
    * **Purpose:** Provides default placeholder images for the block components.
    * **Terms of Service:** https://imgbb.com/tos
    * **Privacy Policy:** https://imgbb.com/privacy
 
+== Third-Party Libraries ==
+
+= Immer =
+* **Version:** 11.1.8
+* **Source:** https://immerjs.github.io/immer/
+* **GitHub:** https://github.com/immerjs/immer
+* **License:** MIT
+* **Purpose:** Used for managing immutable state in a more convenient way.
+
+= bpl-tools =
+* Source / GitHub: https://github.com/bPlugins/bpl-tools
+* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
+* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
+* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
 
 == Installation ==
 
