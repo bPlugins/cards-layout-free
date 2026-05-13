@@ -33,7 +33,7 @@ export const dashboardInfo = (info) => {
 
     changelogs: [
       {
-        version: "2.0.2 - 10 May, 2026",
+        version: "2.0.2 - 13 May, 2026",
         list: [
           "Compliance update: Removed all gated features and trialware logic.",
           "Enhanced block stability and settings panel.",

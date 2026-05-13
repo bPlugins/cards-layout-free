@@ -105,21 +105,28 @@ https://wordpress.org/support/plugin/cards-layout-free/
 
 This plugin utilizes external services to provide optional diagnostic tracking and support. These services are only active if you explicitly opt-in via the activation screen.
 
-1. **bPlugins Middleware**
-   * **Endpoint:** https://api.bplugins.com/wp-json/freemius/v1/middleware/
-   * **Data Sent:** Site URL, WordPress version, PHP version, locale, plugin version, and unique site ID.
-   * **Purpose:** Provides a middleware bridge for plugin activation and diagnostic tracking.
-   * **Terms of Service:** https://bplugins.com/terms-of-service/
-   * **Privacy Policy:** https://bplugins.com/privacy-policy/
+1. = bPlugins API =
+   * **Service URL:** [https://api.bplugins.com](https://api.bplugins.com)
+   * **Purpose:** The plugin's admin dashboard fetches product comparison data and pricing information to display relevant upgrade options and feature details.
+   * **Data Sent:** Only the plugin slug is transmitted; no personal or site data is collected.
+   * **Terms of Service:** [https://bplugins.com/terms-of-service/](https://bplugins.com/terms-of-service/)
+   * **Privacy Policy:** [https://bplugins.com/privacy-policy/](https://bplugins.com/privacy-policy/)
 
-2. **Freemius**
+2. = WordPress.org Plugins API =
+   * **Service URL:** [https://api.wordpress.org/plugins/info/1.2/](https://api.wordpress.org/plugins/info/1.2/)
+   * **Purpose:** The admin dashboard queries the official WordPress.org Plugins API to retrieve and display a curated list of other plugins by the same author ("Our Plugins" section).
+   * **Data Sent:** Plugin slugs and author name; no personal or site data is collected.
+   * **Terms of Service:** [https://wordpress.org/about/tos/](https://wordpress.org/about/tos/)
+   * **Privacy Policy:** [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
+
+3. = Freemius =
    * **Endpoint:** https://wp.freemius.com/action/service/user/install/
    * **Data Sent:** Site URL, WordPress version, PHP version, locale, plugin version, site name, and user email/name (if provided).
    * **Purpose:** Handles the opt-in process and synchronization of user/site data for support and updates.
    * **Terms of Service:** https://freemius.com/terms/
    * **Privacy Policy:** https://freemius.com/privacy/
 
-3. **ImgBB (External Image Hosting)**
+4. = ImgBB (External Image Hosting) =
    * **Endpoint:** https://i.ibb.co/
    * **Data Sent:** None (External resource request only).
    * **Purpose:** Provides default placeholder images for the block components.
@@ -174,7 +181,7 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
-= 2.0.2 – 10 May, 2026 =
+= 2.0.2 – 13 May, 2026 =
 
 * Removed all Freemius-based feature gating and premium license checks from the plugin codebase.
 * Removed locked/blurred Pro-only layouts and any restricted built-in functionality to comply with WordPress.org Guideline #5 (Trialware).
@@ -223,36 +230,3 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 = 1.0.0 =
 * Initial Release
 
-
-== Upgrade Notice ==
-
-= 2.0.2 – 10 May, 2026 =
-* Compliance update for WordPress.org directory.
-
-= 2.0.1 – 26 April, 2026 =
-* Enhanced block title for clearer identification.
-
-= 2.0.0 – 21 Apr 2026 =
-* Major release: New layout engine, Hero Feature Card, Achievement Card, and Feature Card.
-* Added responsive grid engine, icon wrap sizing, card tags, badge animation controls, optimizations & fixes.
-
-
-= 1.1.4 – 29 July, 2025 =
-* focalPoint added good feature;
-
-= 1.1.3 – 27 July, 2025 =
-* Import content from image media;
-
-= 1.1.2 – 9 July, 2025 =
-* Image border radius and card content align option added
-
-= 1.1.1 – 6 July, 2025 =
-* Card URL and button URL now open in a new tab;
-
-= 1.1.0 – 4 July, 2025 =
-* Default layout available
-* Set card border, padding, and border radius
-* Customize card title, description, and button typography, color, padding, and border radius
-
-= 1.0.0 =
-* Initial Release
