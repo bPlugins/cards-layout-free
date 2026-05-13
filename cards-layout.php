@@ -1,15 +1,16 @@
 <?php
 /**
  * Plugin Name: Cards Layout
- * Description: This plugin offers multiple customizable layouts like grid, list, and carousel, making content display easy and flexible.
+ * Description: Build responsive, customizable card components with multiple layouts and dynamic styles in the Gutenberg editor.
  * Version: 2.0.2
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * Tested up to: 6.9
  * Stable tag: 2.0.2
  * Requires at least: 6.5
- * License: GPLv3
- * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
+ * Requires PHP: 7.4
+ * License: GPLv3 or later
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: cards-layout
  * Domain Path: /languages
  */
@@ -17,7 +18,7 @@
 
 
 // ABS PATH
-if (!defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 

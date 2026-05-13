@@ -6,25 +6,24 @@ export const cardsOpt = [
   {
     label: __("Default", "cards-layout"),
     value: "default",
-    isPro: false,
     tooltip: "Default card variant",
   },
   {
     label: __("Hero Feature", "cards-layout"),
     value: "hero-feature",
-    isPro: false,
+
     tooltip: "Hero Feature card variant",
   },
   {
     label: __("Achievement Card", "cards-layout"),
     value: "achievement",
-    isPro: false,
+
     tooltip: "Achievement card variant",
   },
   {
     label: __("Feature", "cards-layout"),
     value: "feature",
-    isPro: false,
+
     tooltip: "Feature card variant",
   },
 
@@ -70,16 +69,6 @@ export const newCardConfig = {
   cUrl: "#",
   newTab: false,
   focalPoint: "",
-  "sparkLines": [
-    { "h": 70, "i": 0.6 },
-    { "h": 60, "i": 0.5 },
-    { "h": 50, "i": 0.4 },
-    { "h": 40, "i": 0.3 },
-    { "h": 30, "i": 0.2 },
-    { "h": 20, "i": 0.1 },
-    { "h": 10, "i": 0.1 }
-  ]
-
 };
 
 export const cardTagTypoConfig = {

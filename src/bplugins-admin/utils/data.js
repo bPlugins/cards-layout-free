@@ -1,13 +1,11 @@
 const slug = "cards-layout";
 
 export const dashboardInfo = (info) => {
-  const { version, isPremium, licenseActiveNonce } = info;
-
-  const proSuffix = isPremium ? " Pro" : "";
+  const { version } = info;
 
   return {
-    name: `Cards Layout${proSuffix}`,
-    displayName: `Cards Layout ${proSuffix}`,
+    name: "Cards Layout",
+    displayName: "Cards Layout",
     description:
       "Cards Layout is a powerful and flexible plugin that allows you to create beautiful and responsive card layouts for your WordPress website. With a wide range of customization options, you can create unique and eye-catching layouts that perfectly match your website's design.",
     slug,
@@ -32,7 +30,7 @@ export const dashboardInfo = (info) => {
       plan_id: 44997,
       public_key: "pk_3498117315f221ea381495c9c0a7f",
     },
-    licenseActiveNonce,
+
     changelogs: [
       {
         version: "2.0.2 - 10 May, 2026",
@@ -80,8 +78,6 @@ export const dashboardInfo = (info) => {
 };
 
 export const demoInfo = {
-  // allInOneLabel: 'See All Demos',
-  // allInOneLink: 'https://apb.bplugins.com/all-demos-in-one-place/',
   demos: [
     {
       icon: "",
@@ -117,7 +113,7 @@ export const demoInfo = {
     },
     {
       icon: "",
-      title: "State / Counter Card (Pro)",
+      title: "State / Counter Card",
       description: "Showcase key metrics with a modern twist. This layout features a prominent number, a subtle sparkline graph, and a clear label. Ideal for dashboards, analytics, and performance highlights.",
       category: "",
       type: "iframe",
@@ -125,7 +121,7 @@ export const demoInfo = {
     },
     {
       icon: "",
-      title: "Progress Card (Pro)",
+      title: "Progress Card",
       description: "Visualize progress with sleek, customizable progress bars. This layout is perfect for showing project completion, skill levels, or any metric that benefits from a clear visual scale.",
       category: "",
       type: "iframe",
@@ -133,7 +129,7 @@ export const demoInfo = {
     },
     {
       icon: "",
-      title: "Animated Service Card (Pro)",
+      title: "Animated Service Card",
       description: "A dynamic card layout that brings your content to life with subtle animations. Perfect for service-based businesses or feature highlights where movement draws attention.",
       category: "",
       type: "iframe",
@@ -141,7 +137,7 @@ export const demoInfo = {
     },
     {
       icon: "",
-      title: "Banner Style Card (Pro)",
+      title: "Banner Style Card",
       description: "A bold, full-width banner-style card designed to grab attention. Ideal for promotions, announcements, or featured content that needs to stand out.",
       category: "",
       type: "iframe",
@@ -150,7 +146,7 @@ export const demoInfo = {
 
     {
       icon: "",
-      title: "Client Logo Card (Pro)",
+      title: "Client Logo Card",
       description: "A clean, professional layout perfect for showcasing client logos or partner brands. Features a prominent image area and structured text blocks for company names and descriptions.",
       category: "",
       type: "iframe",
@@ -158,7 +154,7 @@ export const demoInfo = {
     },
     {
       icon: "",
-      title: "Creative Curve Card (Pro)",
+      title: "Creative Curve Card",
       description: "A visually striking card layout featuring a unique curved cutout design element. This layout adds a modern and creative flair, perfect for portfolios, design agencies, or any brand wanting to stand out.",
       category: "",
       type: "iframe",

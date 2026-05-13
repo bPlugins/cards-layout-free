@@ -1,6 +1,6 @@
 <?php
 
-if (!defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
@@ -15,7 +15,7 @@ if ( ! class_exists( 'PHCLBBlock' ) ) {
 		 * Constructor.
 		 */
 		public function __construct() {
-			add_action( 'init', array( $this, 'onInit' ) );
+			add_action( 'init', array( $this, 'phclb_on_init' ) );
 		}
 
 		/**
@@ -23,7 +23,7 @@ if ( ! class_exists( 'PHCLBBlock' ) ) {
 		 *
 		 * @return void
 		 */
-		public function onInit() {
+		public function phclb_on_init() {
 			register_block_type( __DIR__ . '/build' );
 		}
 	}

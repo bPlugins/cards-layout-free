@@ -1,27 +1,27 @@
 === Cards Layout ===
 Contributors: bplugins, abuhayat, asadsuzan, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: cards, layout, content, gallery, lightbox
+Tags: cards, card layout, showcase, grid,responsive
 Requires at least: 6.5
 Tested up to: 6.9
 Stable tag: 2.0.2
-Requires PHP: 7.1
+Requires PHP: 7.4
 License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 
-Build responsive, customizable card components with multiple premium layouts and dynamic styles in the Gutenberg editor.
+Build responsive, customizable card components with multiple layouts and dynamic styles in the Gutenberg editor.
 
 == Description ==
 
-Cards Elements is a powerful and flexible WordPress Gutenberg block plugin designed to help you create stunning, professional-grade card components in seconds. 
+Cards Layout is a powerful and flexible WordPress Gutenberg block plugin designed to help you create stunning, professional-grade card components in seconds. 
 
-Whether you need to highlight core features, showcase team profiles, display achievement metrics, or present your skill progress, Cards Elements provides a rich set of beautifully crafted, responsive components to elevate your website's design.
+Whether you need to highlight core features, showcase team profiles, display achievement metrics, or present your skill progress, Cards Layout provides a rich set of beautifully crafted, responsive components to elevate your website's design.
 
 
-[**Cards Layout**](https://bplugins.com/products/cards-layout/) | [**Pricing**](https://bplugins.com/products/cards-layout/pricing) | [**Support**](https://bplugins.com/support/) | [**Demos**](https://bplugins.com/products/cards-layout/#demos)
+[**Cards Layout**](https://bplugins.com/products/cards-layout/) | [**Support**](https://bplugins.com/support/) | [**Demos**](https://bplugins.com/products/cards-layout/#demos)
 
-= 🚀 Features =
+= ☑ Features =
 * **Default Card:** The perfect minimal card for general content, featuring image, title, description, and button controls.
 
 * **Hero Feature Card:** A prominent split-design card with advanced image focal point controls, overlay gradients, floating notification badges, and floating stat highlights.
@@ -35,7 +35,7 @@ Whether you need to highlight core features, showcase team profiles, display ach
 * **Advanced Global Styling:** Granular control over everything from typography (fonts, sizes, weights) to multi-state box shadows, borders, padding, and alignments.
 
 = 💎 Pro Features (Premium) =
-Unlock the full potential of Cards Layout with our Premium layouts designed for professional, SaaS-style websites:
+The following premium layouts and advanced features are available exclusively in the standalone **Cards Layout Pro** plugin (available on our website). These features are not included in this free version and require the separate Pro plugin to be installed.
 
 * **State / Counter Card:** Create dynamic statistic cards featuring up/down trend ribbons and customizable visual sparkline graphs.
 
@@ -50,28 +50,32 @@ Unlock the full potential of Cards Layout with our Premium layouts designed for 
 * **Feature Card:** Premium, sleek layout for displaying software or service features.
 
 
-= Source Code =
+== Source Code ==
 
-The source code for all generated build assets is publicly available here: [**https://github.com/bPlugins/cards-layout**](https://github.com/bPlugins/cards-layout-free)
+The source code for all generated build assets is publicly available here: [**https://github.com/bPlugins/cards-layout-free**](https://github.com/bPlugins/cards-layout-free)
 
-= This repository includes: =
-– Original source files
-– Build configuration
-– Development workflow
-– Asset generation process
+To build the plugin from source:
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+3. Run `npm run build` to generate the production-ready assets in the `build/` directory.
 
+The source files for the following build assets are located in the `src/` directory:
+- `build/index.js` -> `src/index.js`
+- `build/admin-dashboard.js` -> `src/bplugins-admin/dashboard.js`
+- `build/admin-post.js` -> `src/bplugins-admin/post.js`
+- `build/view.js` -> `src/view.js`
 
+== Third-Party Libraries ==
 
-= How to Use =
+This plugin utilizes the following third-party libraries:
 
-1. Install and activate the **Cards Elements** plugin.
-2. Open the Gutenberg editor.
-3. Add **Cards Elements** from the block inserter.
-4. Customize cards layout from the right-side settings panel.
-5. Publish and enjoy 🎉
+1. **immer** (v11.1.8)
+   * Repository: https://github.com/immerjs/immer
+   * License: MIT
 
-***For installation help click on Installation Tab***
-
+2. **react-router-dom** (v7.15.0)
+   * Repository: https://github.com/remix-run/react-router
+   * License: MIT
 
 == Feedback & Support ==
 
@@ -79,12 +83,7 @@ Did you find a bug or have a feature request?
 📧 [Send feedback](mailto:support@bplugins.com)
 
 Support forum:  
-https://wordpress.org/support/plugin/cards-layout/
-
-
-### Check out the Parent Plugin of this plugin-
-
-[**B Blocks**](https://bblockswp.com) – A blocks collection and page building tool for Gutenberg.
+https://wordpress.org/support/plugin/cards-layout-free/
 
 
 ### Check out our other WordPress Plugins-
@@ -102,15 +101,41 @@ https://wordpress.org/support/plugin/cards-layout/
 [**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) – Show posts and custom posts in different layouts.
 
 
+== External Services ==
+
+This plugin utilizes external services to provide optional diagnostic tracking and support. These services are only active if you explicitly opt-in via the activation screen.
+
+1. **bPlugins Middleware**
+   * **Endpoint:** https://api.bplugins.com/wp-json/freemius/v1/middleware/
+   * **Data Sent:** Site URL, WordPress version, PHP version, locale, plugin version, and unique site ID.
+   * **Purpose:** Provides a middleware bridge for plugin activation and diagnostic tracking.
+   * **Terms of Service:** https://bplugins.com/terms-of-service/
+   * **Privacy Policy:** https://bplugins.com/privacy-policy/
+
+2. **Freemius**
+   * **Endpoint:** https://wp.freemius.com/action/service/user/install/
+   * **Data Sent:** Site URL, WordPress version, PHP version, locale, plugin version, site name, and user email/name (if provided).
+   * **Purpose:** Handles the opt-in process and synchronization of user/site data for support and updates.
+   * **Terms of Service:** https://freemius.com/terms/
+   * **Privacy Policy:** https://freemius.com/privacy/
+
+3. **ImgBB (External Image Hosting)**
+   * **Endpoint:** https://i.ibb.co/
+   * **Data Sent:** None (External resource request only).
+   * **Purpose:** Provides default placeholder images for the block components.
+   * **Terms of Service:** https://imgbb.com/tos
+   * **Privacy Policy:** https://imgbb.com/privacy
+
+
 == Installation ==
 
 ### From Gutenberg Editor:
 1. Go to the WordPress Block/Gutenberg Editor
-2. Search For **Cards Elements**
-3. Click on the **Cards Elements** to add the block
+2. Search For **Cards Layout**
+3. Click on the **Cards Layout** to add the block
 
 ### Download & Upload:
-1. Download the **Cards Elements** plugin (*.zip file*)
+1. Download the **Cards Layout** plugin (*.zip file*)
 2. In your admin area, go to the Plugins menu and click on **Add New**
 3. Click on **Upload Plugin** and choose the **`cards-layout.zip`** file and click on **Install Now**
 4. Activate the plugin and Enjoy!
@@ -208,9 +233,7 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Enhanced block title for clearer identification.
 
 = 2.0.0 – 21 Apr 2026 =
-* Major release: Cards Layout Pro with SaaS-style layouts. 
-* New free layouts: Hero Feature, Achievement. 
-* New Pro layouts: Progress, Banner, Feature & more.
+* Major release: New layout engine, Hero Feature Card, Achievement Card, and Feature Card.
 * Added responsive grid engine, icon wrap sizing, card tags, badge animation controls, optimizations & fixes.
 
 

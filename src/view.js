@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   blockNameEls.forEach((blockNameEl) => {
     const attributes = JSON.parse(blockNameEl.dataset.attributes);
 
-
+    console.log(attributes, 'front end')
     createRoot(blockNameEl).render(
       <>
         <Style attributes={attributes} id={blockNameEl.id} />

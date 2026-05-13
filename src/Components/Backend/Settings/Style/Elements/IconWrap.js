@@ -11,7 +11,7 @@ const IconWrap = ({ attributes, updateObject }) => {
 
   return (
     <PanelBody
-      className="phPanelBody"
+      className="bPlPanelBody"
       title={__("Icon", "cards-layout")}
       initialOpen={false}
     >

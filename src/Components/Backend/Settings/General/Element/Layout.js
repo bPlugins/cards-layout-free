@@ -34,7 +34,7 @@ const Layout = ({ attributes, setAttributes }) => {
           layout
      =============  */}
       <PanelBody
-        className="phPanelBody"
+        className="bPlPanelBody"
         title={__("Layout", "cards-layout")}
         initialOpen={true}
       >

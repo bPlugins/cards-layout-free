@@ -1,0 +1,339 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "phclb/cards-layout",
+  "version": "2.0.2",
+  "title": "Cards Layout",
+  "category": "widgets",
+  "description": "Build responsive, customizable card components with multiple layouts and dynamic styles in the Gutenberg editor.",
+  "keywords": [
+    "cards",
+    "layout",
+    "content",
+    "gallery",
+    "lightbox"
+  ],
+  "textdomain": "cards-layout",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "wide"
+    },
+    "cards": {
+      "type": "array",
+      "default": [
+        {
+          "img": {
+            "url": "https://i.ibb.co/JR5B76cx/card-3.jpg",
+            "isSet": false
+          },
+          "altText": "",
+          "title": "John Doe",
+          "subTitle": "",
+          "desc": "Conveniently engineer diverse products rather than bleeding-edge applications",
+          "btnLabel": "Load More",
+          "btnUrl": "#",
+          "cUrl": "",
+          "newTab": false,
+          "focalPoint": "",
+          "svg": "<svg stroke='currentColor' fill='currentColor' stroke-width='2' viewBox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round'  xmlns='http://www.w3.org/2000/svg'><polygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'></polygon></svg>"
+        },
+        {
+          "img": {
+            "url": "https://i.ibb.co/KjbH0QFg/card-2.jpg",
+            "isSet": false
+          },
+          "altText": "",
+          "title": "John Doe",
+          "subTitle": "",
+          "desc": "Conveniently engineer diverse products rather than bleeding-edge applications",
+          "btnLabel": "Load More",
+          "btnUrl": "#",
+          "cUrl": "#",
+          "newTab": false,
+          "focalPoint": "",
+          "svg": "<svg stroke='currentColor' fill='currentColor' stroke-width='0' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'><path d='M376 192h-24v-46.7c0-52.7-42-96.5-94.7-97.3-53.4-.7-97.3 42.8-97.3 96v48h-24v-48c0-53.2 43.8-96 96-96s96 42.8 96 96v48z'></path></svg>"
+        },
+        {
+          "img": {
+            "url": "https://i.ibb.co/v4ZqhZKV/card-1.jpg",
+            "isSet": false
+          },
+          "altText": "",
+          "title": "John Doe",
+          "subTitle": "",
+          "desc": "Conveniently engineer diverse products rather than bleeding-edge applications",
+          "btnLabel": "Load More",
+          "btnUrl": "#",
+          "cUrl": "#",
+          "newTab": false,
+          "focalPoint": "",
+          "tags": [],
+          "tagTitle": "See My Latest Works Here",
+          "svg": "<svg stroke='currentColor' fill='currentColor' stroke-width='0' viewBox='0 0 16 16'  xmlns='http://www.w3.org/2000/svg'><path d='M4.715 6.542L3.343 7.914a3 3 0 104.243 4.243l1.828-1.829A3 3 0 008.586 5.5L8 6.086a1.001 1.001 0 00-.154.199 2 2 0 01.861 3.337L6.88 11.45a2 2 0 11-2.83-2.83l.793-.792a4.018 4.018 0 01-.128-1.287z'></path><path d='M5.712 6.96l.167-.167a1.99 1.99 0 01.896-.518 1.99 1.99 0 01.518-.896l.167-.167A3.004 3.004 0 006 5.499c-.22.46-.316.963-.288 1.46z'></path><path d='M6.586 4.672A3 3 0 007.414 9.5l.775-.776a2 2 0 01-.896-3.346L9.12 3.55a2 2 0 012.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 00-4.243-4.243L6.586 4.672z'></path><path d='M10 9.5a2.99 2.99 0 00.288-1.46l-.167.167a1.99 1.99 0 01-.896.518 1.99 1.99 0 01-.518.896l-.167.167A3.004 3.004 0 0010 9.501z'></path></svg>"
+        }
+      ]
+    },
+    "cardsLayout": {
+      "type": "object",
+      "default": {
+        "style": "default"
+      }
+    },
+    "isContent": {
+      "type": "boolean",
+      "default": false
+    },
+    "cardTag": {
+      "type": "object",
+      "default": {
+        "isSet": false,
+        "text": "",
+        "typo": {
+          "fontSize": {
+            "desktop": 11,
+            "tablet": 11,
+            "mobile": 11
+          },
+          "fontWeight": 700,
+          "lineHeight": "135%",
+          "letterSpace": "0.06em",
+          "fontFamily": "inter"
+        }
+      }
+    },
+    "cardStyle": {
+      "type": "object",
+      "align": "left",
+      "default": {
+        "newTab": false,
+        "borders": {
+          "color": "#000",
+          "style": "solid",
+          "width": "1px"
+        },
+        "radius": 5,
+        "padding": {
+          "top": "5px",
+          "right": "5px",
+          "bottom": "5px",
+          "left": "5px"
+        }
+      }
+    },
+    "baseCard": {
+      "type": "object",
+      "default": {}
+    },
+    "iconWrap": {
+      "type": "object",
+      "default": {}
+    },
+    "img": {
+      "type": "object",
+      "default": {
+        "borderRadius": 0
+      }
+    },
+    "title": {
+      "type": "object",
+      "default": {
+        "typo": {
+          "fontSize": {
+            "desktop": 18,
+            "tablet": 14,
+            "mobile": 14
+          },
+          "fontWeight": 500,
+          "lineHeight": "135%"
+        },
+        "color": "#000"
+      }
+    },
+    "desc": {
+      "type": "object",
+      "default": {
+        "typo": {
+          "fontSize": {
+            "desktop": 14,
+            "tablet": 14,
+            "mobile": 14
+          },
+          "fontWeight": 400,
+          "lineHeight": "135%"
+        },
+        "color": "#000"
+      }
+    },
+    "btn": {
+      "type": "object",
+      "default": {
+        "typo": {
+          "fontSize": {
+            "desktop": 16,
+            "tablet": 14,
+            "mobile": 14
+          },
+          "fontWeight": 500,
+          "lineHeight": "135%"
+        },
+        "colors": {
+          "color": "#fff",
+          "bg": "#000"
+        },
+        "padding": {
+          "top": "5px",
+          "right": "5px",
+          "bottom": "5px",
+          "left": "5px"
+        },
+        "borders": {
+          "color": "#000",
+          "style": "solid",
+          "width": "0px"
+        },
+        "radius": 5
+      }
+    },
+    "eyeBrow": {
+      "type": "object",
+      "default": {
+        "typo": {
+          "fontSize": {
+            "desktop": 11,
+            "tablet": 11,
+            "mobile": 11
+          },
+          "fontWeight": 700,
+          "lineHeight": "11px",
+          "letterSpacing": "0.1em",
+          "textTransform": "uppercase"
+        },
+        "color": "#a5b4fc"
+      }
+    },
+    "achievement": {
+      "type": "object",
+      "default": {
+        "achValue": {
+          "typo": {
+            "fontSize": {
+              "desktop": 36,
+              "tablet": 24,
+              "mobile": 18
+            }
+          },
+          "bg": {}
+        },
+        "badge": {},
+        "isAnimation": true,
+        "animSpeed": 20
+      }
+    },
+    "columns": {
+      "type": "object",
+      "default": {
+        "desktop": 3,
+        "tablet": 2,
+        "mobile": 1
+      }
+    },
+    "columnGap": {
+      "type": "string",
+      "default": "30px"
+    },
+    "rowGap": {
+      "type": "string",
+      "default": "40px"
+    },
+    "layout": {
+      "type": "string",
+      "default": "vertical"
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "typography": {
+      "type": "object",
+      "default": {
+        "fontSize": 25
+      }
+    },
+    "colors": {
+      "type": "object",
+      "default": {
+        "color": "#333",
+        "bg": "#fff"
+      }
+    },
+    "separator": {
+      "type": "object",
+      "default": {
+        "width": "20%",
+        "height": "2px",
+        "style": "solid",
+        "color": "#bbb"
+      }
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "top": "15px",
+        "right": "30px",
+        "bottom": "15px",
+        "left": "30px"
+      }
+    },
+    "margin": {
+      "type": "object",
+      "default": {
+        "top": "0px",
+        "right": "0px",
+        "bottom": "15px",
+        "left": "0px"
+      }
+    },
+    "border": {
+      "type": "object",
+      "default": {
+        "radius": "5px"
+      }
+    },
+    "shadow": {
+      "type": "array",
+      "default": {}
+    },
+    "heroFeatureCardEle": {
+      "type": "object",
+      "default": {}
+    },
+    "creativeCurve": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": [
+    "file:./index.js",
+    "wp-api",
+    "wp-util"
+  ],
+  "editorStyle": [
+    "file:./index.css"
+  ],
+  "style": [
+    "file:./view.css"
+  ],
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
