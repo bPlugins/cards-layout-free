@@ -1,7 +1,5 @@
 import { __ } from "@wordpress/i18n";
 
-import { verticalLineIcon, horizontalLineIcon } from "./icons";
-
 export const cardsOpt = [
   {
     label: __("Default", "cards-layout"),
@@ -35,18 +33,6 @@ export const alignOpt = [
   { label: __("Right", "cards-layout"), value: "right" },
 ];
 
-export const layouts = [
-  {
-    label: __("Vertical", "cards-layout"),
-    value: "vertical",
-    icon: verticalLineIcon,
-  },
-  {
-    label: __("Horizontal", "cards-layout"),
-    value: "horizontal",
-    icon: horizontalLineIcon,
-  },
-];
 
 export const generalStyleTabs = [
   { name: "general", title: __("General", "cards-layout") },
@@ -74,9 +60,9 @@ export const newCardConfig = {
 export const cardTagTypoConfig = {
   typo: {
     fontSize: {
-      desktop: "10px",
-      tablet: "10px",
-      mobile: "10px",
+      desktop: "12px",
+      tablet: "12px",
+      mobile: "12px",
     },
     fontWeight: 700,
     letterSpace: "0.1em",
@@ -85,22 +71,8 @@ export const cardTagTypoConfig = {
   },
 };
 
-export const heroFeatureCardTypoConfig = {
-  img: {
-    gradients: [
-      "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
-      "linear-gradient(135deg, #0d2137 0%, #1a0d37 100%)",
-      "linear-gradient(135deg, #0d2620 0%, #0d1f20 100%)",
-    ],
-  },
-  overlay: {
-    gradients: [
-      "linear-gradient(135deg, rgba(99,102,241,0.4) 0%, rgba(6,182,212,0.3) 100%)",
-      " linear-gradient(135deg, rgba(139,92,246,0.4), rgba(6,182,212,0.25))",
-      " linear-gradient(135deg, rgba(16,185,129,0.35), rgba(6,182,212,0.2))",
-    ],
-  },
-};
 
 
 
+
+export const fallBackIconSvg = "<svg stroke='currentColor' fill='currentColor' stroke-width='2' viewBox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round'  xmlns='http://www.w3.org/2000/svg'><polygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'></polygon></svg>"

@@ -10,6 +10,7 @@ const Content = ({ isContent, img, title, desc, updateCard }) => {
 
 
       <TextControl
+        className='mt10'
         label={__("Title", "cards-layout")}
         labelPosition={__("top", "cards-layout")}
         value={isContent ? img?.title : title}
@@ -19,6 +20,7 @@ const Content = ({ isContent, img, title, desc, updateCard }) => {
 
 
       <TextareaControl
+        className='mt10'
         label={__("Description", "cards-layout")}
         labelPosition={__("top", "cards-layout")}
         value={isContent ? img?.caption : desc}

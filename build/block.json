@@ -195,23 +195,6 @@
         "radius": 5
       }
     },
-    "eyeBrow": {
-      "type": "object",
-      "default": {
-        "typo": {
-          "fontSize": {
-            "desktop": 11,
-            "tablet": 11,
-            "mobile": 11
-          },
-          "fontWeight": 700,
-          "lineHeight": "11px",
-          "letterSpacing": "0.1em",
-          "textTransform": "uppercase"
-        },
-        "color": "#a5b4fc"
-      }
-    },
     "achievement": {
       "type": "object",
       "default": {
@@ -267,15 +250,6 @@
         "bg": "#fff"
       }
     },
-    "separator": {
-      "type": "object",
-      "default": {
-        "width": "20%",
-        "height": "2px",
-        "style": "solid",
-        "color": "#bbb"
-      }
-    },
     "padding": {
       "type": "object",
       "default": {
@@ -305,10 +279,6 @@
       "default": {}
     },
     "heroFeatureCardEle": {
-      "type": "object",
-      "default": {}
-    },
-    "creativeCurve": {
       "type": "object",
       "default": {}
     }

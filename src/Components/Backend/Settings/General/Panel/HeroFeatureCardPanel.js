@@ -71,17 +71,20 @@ const HeroFeatureCardPanel = ({ attributes, setAttributes, arrKey, index }) => {
           initialOpen={false}
         >
           <TextControl
+            className='mt10'
             label="Badge Label"
             value={badge?.label || "New Release"}
             onChange={(val) => updateCard("badge", { ...badge, label: val })}
           />
 
           <TextControl
+            className='mt10'
             label="Stat Number"
             value={stat?.num || "99.9%"}
             onChange={(val) => updateCard("stat", { ...stat, num: val })}
           />
           <TextControl
+            className='mt10'
             label="Stat Label"
             value={stat?.lbl || "Uptime SLA"}
             onChange={(val) => updateCard("stat", { ...stat, lbl: val })}

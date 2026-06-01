@@ -5,6 +5,7 @@ import FeatureCardPanel from "./FeatureCardPanel";
 import DefaultCardPanel from "./DefaultCardPanel";
 import HeroFeatureCardPanel from "./HeroFeatureCardPanel";
 import AchievementCardPanel from "./AchievementCardPanel";
+import { newCardConfig } from '../../../../../utils/options';
 
 
 
@@ -30,23 +31,7 @@ const Panel = ({ attributes, setAttributes, activeIndex, setActiveIndex }) => {
     >
       <ItemsPanel
         {...itemsProps}
-        newItem={{
-          img: {
-            id: null,
-            url: "https://i.ibb.co/KjbH0QFg/card-2.jpg",
-            alt: "",
-            title: "",
-          },
-          altText: "",
-          title: "choice",
-          desc: "Energistically underwhelm client-based scenarios vis-a-vis interdependent customer service.",
-          btnLabel: "Load More",
-          btnUrl: "#",
-          cUrl: "#",
-          newTab: false,
-          focalPoint: "",
-          svg: "",
-        }}
+        newItem={newCardConfig}
         ItemSettings={PanelItem}
         itemLabel="Card"
         design="sortable"

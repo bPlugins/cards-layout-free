@@ -27,7 +27,7 @@ const CardImg = ({
       {/* 1. Media Upload Control */}
 
       <InlineDetailMediaUpload
-        className="mt20"
+        className="mt10"
         label={__("Image", "cards-layout")}
         labelPosition={__("top", "cards-layout")}
         value={img}
@@ -43,7 +43,7 @@ const CardImg = ({
       {
         !hideFocalPoint &&
         <FocalPointPicker
-          className="mt20"
+          className="mt10"
           __nextHasNoMarginBottom
           url={img?.url}
           value={focalPoint}
@@ -55,7 +55,7 @@ const CardImg = ({
 
       {/* 3. Alt Text Control */}
       <TextControl
-        className="mt20"
+        className="mt10"
         label={__("Image Alt", "cards-layout")}
         labelPosition="top"
         value={isContent ? img?.alt : altText}

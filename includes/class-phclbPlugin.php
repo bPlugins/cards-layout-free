@@ -109,8 +109,7 @@ if (!class_exists('PHCLBPlugin')) {
 			if (function_exists('do_blocks')) {
 				$content = do_blocks($content);
 			}
-
-			return do_shortcode($content);
+			return wp_kses_post( do_shortcode($content) );
 		}
 	}
 }

@@ -3,6 +3,7 @@ import { __ } from "@wordpress/i18n";
 import { produce } from "immer";
 import Content from "../Element/Content";
 import { TextControl } from "@wordpress/components";
+import { fallBackIconSvg } from '../../../../../utils/options';
 
 const AchievementCardPanel = ({ attributes, setAttributes, arrKey, index }) => {
   const cards = attributes[arrKey];
@@ -24,7 +25,7 @@ const AchievementCardPanel = ({ attributes, setAttributes, arrKey, index }) => {
       <IconLibrary
         className="mt10"
         label={__("Insert Icon", "cards-layout")}
-        value={svg}
+        value={svg || fallBackIconSvg}
         onChange={(val) => {
           updateCard("svg", val);
         }}

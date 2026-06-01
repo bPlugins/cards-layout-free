@@ -11,6 +11,7 @@ const CardBtn = ({ btnLabel, btnUrl, newTab, updateCard }) => {
       {/* 1. Button Label Control */}
 
       <TextControl
+        className='mt10'
         label={__("Button label", "cards-layout")}
         labelPosition={__("top", "cards-layout")}
         value={btnLabel}
@@ -18,14 +19,9 @@ const CardBtn = ({ btnLabel, btnUrl, newTab, updateCard }) => {
         onChange={(val) => updateCard("btnLabel", val)}
       />
 
-
-
-
-
-
-
       {/* 2. Button URL Control */}
       <TextControl
+        className='mt10'
         label={__("Button Url", "cards-layout")}
         labelPosition={__("top", "cards-layout")}
         value={btnUrl}
@@ -36,6 +32,7 @@ const CardBtn = ({ btnLabel, btnUrl, newTab, updateCard }) => {
 
       {/* 3. New Tab Toggle Control */}
       <ToggleControl
+        className='mt10'
         label={__("Open new tab", "cards-layout")}
         checked={newTab}
         onChange={(val) => updateCard("newTab", val)}

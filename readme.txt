@@ -19,9 +19,9 @@ Cards Layout is a powerful and flexible WordPress Gutenberg block plugin designe
 Whether you need to highlight core features, showcase team profiles, display achievement metrics, or present your skill progress, Cards Layout provides a rich set of beautifully crafted, responsive components to elevate your website's design.
 
 
-[**Cards Layout**](https://bplugins.com/products/cards-layout/) | [**Support**](https://bplugins.com/support/) | [**Demos**](https://bplugins.com/products/cards-layout/#demos)
+[**Cards Layout**](https://bplugins.com/products/cards-layout/) | [**Pricing**](https://bplugins.com/products/cards-layout/pricing) | [**Support**](https://wordpress.org/support/plugin/cards-layout//) | [**Demos**](https://bplugins.com/products/cards-layout/#demos)
 
-= ☑ Features =
+== Key Features ==
 * **Default Card:** The perfect minimal card for general content, featuring image, title, description, and button controls.
 
 * **Hero Feature Card:** A prominent split-design card with advanced image focal point controls, overlay gradients, floating notification badges, and floating stat highlights.
@@ -34,7 +34,7 @@ Whether you need to highlight core features, showcase team profiles, display ach
 
 * **Advanced Global Styling:** Granular control over everything from typography (fonts, sizes, weights) to multi-state box shadows, borders, padding, and alignments.
 
-= 💎 Pro Features (Premium) =
+== Pro Features  ==
 The following premium layouts and advanced features are available exclusively in the standalone **Cards Layout Pro** plugin (available on our website). These features are not included in this free version and require the separate Pro plugin to be installed.
 
 * **State / Counter Card:** Create dynamic statistic cards featuring up/down trend ribbons and customizable visual sparkline graphs.
@@ -50,89 +50,27 @@ The following premium layouts and advanced features are available exclusively in
 * **Feature Card:** Premium, sleek layout for displaying software or service features.
 
 
-== Source Code ==
-
-The source code for all generated build assets is publicly available here: [**https://github.com/bPlugins/cards-layout-free**](https://github.com/bPlugins/cards-layout-free)
-
-To build the plugin from source:
-1. Clone the repository.
-2. Run `npm install` to install dependencies.
-3. Run `npm run build` to generate the production-ready assets in the `build/` directory.
-
-The source files for the following build assets are located in the `src/` directory:
-- `build/index.js` -> `src/index.js`
-- `build/admin-dashboard.js` -> `src/bplugins-admin/dashboard.js`
-- `build/admin-post.js` -> `src/bplugins-admin/post.js`
-- `build/view.js` -> `src/view.js`
-
-== Third-Party Libraries ==
-
-This plugin utilizes the following third-party libraries:
-
-1. **immer** (v11.1.8)
-   * Repository: https://github.com/immerjs/immer
-   * License: MIT
-
-2. **react-router-dom** (v7.15.0)
-   * Repository: https://github.com/remix-run/react-router
-   * License: MIT
-
 == Feedback & Support ==
 
 Did you find a bug or have a feature request?  
-📧 [Send feedback](mailto:support@bplugins.com)
-
-Support forum:  
-https://wordpress.org/support/plugin/cards-layout-free/
+💁‍♂️ [Please share your feedback with us](mailto:support@bplugins.com)
 
 
-### Check out our other WordPress Plugins-
+###  Check out our other WordPress Plugins
 
-[**Html5 Video Player**](https://bplugins.com/products/html5-video-player/) – Display videos as single and playlist in multiple skins.
+ 🎵**[Html5 Audio Player](https://bplugins.com/products/html5-audio-player)** – Best audio player plugin for WordPress.
 
-[**PDF Poster**](https://bplugins.com/products/pdf-poster/) – Display/Embed PDF files with different styles.
+🎬 **[Html5 Video Player](https://bplugins.com/products/html5-video-player)** – Best video player plugin for WordPress.
 
-[**Html5 Audio Player**](https://bplugins.com/products/html5-audio-player/) – Listen audios with awesome visuals.
+📄**[PDF Poster](https://bplugins.com/products/pdf-poster)** – A fully-featured PDF Viewer Plugin for WordPress.
 
-[**StreamCast**](https://bplugins.com/products/streamcast-radio-player/) – Customizable radio player with different skins.
+📑**[Document Embedder](https://bplugins.com/products/document-embedder)** – Best WordPress Document Embedder Plugin.
 
-[**3D Viewer**](https://bplugins.com/products/3d-viewer/) – Embed 3D models and 3D products with interaction.
+🧊**[3D Viewer](https://bplugins.com/products/3d-viewer)** – Display interactive 3D models on the webs.
 
-[**Advanced Post Block**](https://bplugins.com/products/advanced-post-block/) – Show posts and custom posts in different layouts.
+📰**[Advanced Post Block](https://bplugins.com/products/advanced-post-block)** – Best Post Display Plugin for WordPress.
 
 
-== External Services ==
-
-This plugin utilizes external services to provide optional diagnostic tracking and support. These services are only active if you explicitly opt-in via the activation screen.
-
-1. = Freemius =
-   * **Endpoint:** https://wp.freemius.com/action/service/user/install/
-   * **Data Sent:** Site URL, WordPress version, PHP version, locale, plugin version, site name, and user email/name (if provided).
-   * **Purpose:** Handles the opt-in process and synchronization of user/site data for support and updates.
-   * **Terms of Service:** https://freemius.com/terms/
-   * **Privacy Policy:** https://freemius.com/privacy/
-
-2. = ImgBB (External Image Hosting) =
-   * **Endpoint:** https://i.ibb.co/
-   * **Data Sent:** None (External resource request only).
-   * **Purpose:** Provides default placeholder images for the block components.
-   * **Terms of Service:** https://imgbb.com/tos
-   * **Privacy Policy:** https://imgbb.com/privacy
-
-== Third-Party Libraries ==
-
-= Immer =
-* **Version:** 11.1.8
-* **Source:** https://immerjs.github.io/immer/
-* **GitHub:** https://github.com/immerjs/immer
-* **License:** MIT
-* **Purpose:** Used for managing immutable state in a more convenient way.
-
-= bpl-tools =
-* Source / GitHub: https://github.com/bPlugins/bpl-tools
-* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
-* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
-* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
 
 == Installation ==
 
@@ -229,4 +167,59 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 = 1.0.0 =
 * Initial Release
+
+
+
+== Source Code ==
+
+Contribute, report bugs, or view the source code on GitHub  👉
+[**Cards Layout GitHub**](https://github.com/bPlugins/cards-layout-free)
+
+== External Services ==
+This plugin bundles the following third-party JavaScript/PHP libraries.
+
+= SVG Icons (Font Awesome, Lucide, etc.) = 
+ - Purpose: Provides scalable vector icons used for UI elements.
+ - Note: This plugin does not load the full Font Awesome or Lucide libraries. Instead, specific icons are included directly as    inline SVGs in the source code to keep the plugin lightweight and performant.
+
+= Freemius Lite SDK =
+- Version: 2.2.0
+- Source: [https://bplugins.com/](https://bplugins.com/)
+- GitHub: [https://github.com/bPlugins/freemius-lite-sdk](https://github.com/bPlugins/freemius-lite-sdk)
+- License: GPL-2.0-or-later – [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+- Purpose: Provides an opt-in consent form for usage tracking and analytics to help improve the plugin. No data is sent before explicit user consent.
+- External Services: Communicates with `api.bplugins.com` (activation events) and `wp.freemius.com` (opt-in processing) only after user opt-in. See [bPlugins Privacy Policy](https://bplugins.com/privacy-policy) and [Freemius Privacy Policy](https://freemius.com/privacy/).
+
+= ImgBB (External Image Hosting) =
+
+ - Endpoint: [https://i.ibb.co/](https://i.ibb.co/)
+ - Data Sent: None (External resource request only).
+ - Purpose: Provides default placeholder images for the block components.
+ - Terms of Service: [https://imgbb.com/tos](https://imgbb.com/tos)
+ - Privacy Policy: [https://imgbb.com/privacy](https://imgbb.com/privacy)
+
+== Third-Party Libraries ==
+
+= Immer =
+- Version: 11.1.8
+- Source: [https://immerjs.github.io/immer/](https://immerjs.github.io/immer/)
+- GitHub: [https://github.com/immerjs/immer](https://github.com/immerjs/immer)
+- License: MIT
+- Purpose: Used for managing immutable state in a more convenient way.
+
+
+= React Router DOM =
+- Version: 7.15.0
+- Source: [https://reactrouter.com/]( https://reactrouter.com/)
+- GitHub: [https://github.com/remix-run/react-router](https://github.com/remix-run/react-router)
+- License: MIT
+- License URL: [https://github.com/remix-run/react-router/blob/main/LICENSE.md](https://github.com/remix-run/react-router/blob/main/LICENSE.md)
+- Purpose: Used for client-side routing and navigation within the plugin's React-based admin application and settings interface.
+- External Services: None. React Router DOM operates entirely within the browser and does not communicate with external services.
+
+= bpl-tools =
+- Source / GitHub: [https://github.com/bPlugins/bpl-tools](https://github.com/bPlugins/bpl-tools)
+- License: GPL-2.0-or-later: [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+- Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
+- External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: [https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made](https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made)
 
