@@ -27,5 +27,5 @@ if ( ! class_exists( 'PHCLBBlock' ) ) {
 			register_block_type( __DIR__ . '/build' );
 		}
 	}
-	new PHCLBBlock();
+	
 }

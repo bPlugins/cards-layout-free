@@ -24,7 +24,6 @@ const ThemeSwitcher = ({
         <Button
           className={`bpl_theme_picker-btn ${isActive ? "active" : ""}`}
           onClick={() => handleSelect(theme?.value)}
-          disabled={false} // keep clickable if you want up sell
         >
           <span>{theme?.label}</span>
         </Button>

@@ -2,11 +2,11 @@
 /**
  * Plugin Name: Cards Layout
  * Description: Build responsive, customizable card components with multiple layouts and dynamic styles in the Gutenberg editor.
- * Version: 2.0.2
+ * Version: 2.0.3
  * Author: bPlugins
  * Author URI: http://bplugins.com
- * Tested up to: 6.9
- * Stable tag: 2.0.2
+ * Tested up to: 7.0
+ * Stable tag: 2.0.3
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * License: GPLv3 or later
@@ -33,7 +33,7 @@ if (function_exists('phclb_cl_fs')) {
 		? sanitize_text_field(wp_unslash($_SERVER['HTTP_HOST']))
 		: '';
 
-	define('PHCLB_VERSION',('localhost' === $PHCLB_http_host || 'plugins.local' === $PHCLB_http_host)? time(): '2.0.2');
+	define('PHCLB_VERSION',('localhost' === $PHCLB_http_host || 'plugins.local' === $PHCLB_http_host)? time(): '2.0.3');
 
 	define('PHCLB_DIR_URL', plugin_dir_url(__FILE__));
 	define('PHCLB_DIR_PATH', plugin_dir_path(__FILE__));
@@ -42,7 +42,12 @@ if (function_exists('phclb_cl_fs')) {
 
 		if (!function_exists('phclb_cl_fs')) {
 
-		function  phclb_cl_fs()
+		/**
+		 * Returns the main instance of Freemius Lite.
+		 *
+		 * @return Freemius
+		 */
+		function phclb_cl_fs()
 		{
 			global $phclb_cl_fs;
 

@@ -53,7 +53,7 @@ const General = ({
       }
 
 
-      <AdvertiseCard isPremium={false} planLink={'https://bplugins.com/products/cards-layout/pricing'} />
+      <AdvertiseCard planLink={'https://bplugins.com/products/cards-layout/pricing'} />
 
 
     </>

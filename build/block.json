@@ -2,7 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "phclb/cards-layout",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "title": "Cards Layout",
   "category": "widgets",
   "description": "Build responsive, customizable card components with multiple layouts and dynamic styles in the Gutenberg editor.",
@@ -10,8 +10,7 @@
     "cards",
     "layout",
     "content",
-    "gallery",
-    "lightbox"
+    "gallery"
   ],
   "textdomain": "cards-layout",
   "attributes": {
@@ -24,7 +23,7 @@
       "default": [
         {
           "img": {
-            "url": "https://i.ibb.co/JR5B76cx/card-3.jpg",
+            "url": "",
             "isSet": false
           },
           "altText": "",
@@ -40,7 +39,7 @@
         },
         {
           "img": {
-            "url": "https://i.ibb.co/KjbH0QFg/card-2.jpg",
+            "url": "",
             "isSet": false
           },
           "altText": "",
@@ -56,7 +55,7 @@
         },
         {
           "img": {
-            "url": "https://i.ibb.co/v4ZqhZKV/card-1.jpg",
+            "url": "",
             "isSet": false
           },
           "altText": "",
@@ -104,8 +103,8 @@
     },
     "cardStyle": {
       "type": "object",
-      "align": "left",
       "default": {
+        "align": "left",
         "newTab": false,
         "borders": {
           "color": "#000",
@@ -276,7 +275,7 @@
     },
     "shadow": {
       "type": "array",
-      "default": {}
+      "default": []
     },
     "heroFeatureCardEle": {
       "type": "object",

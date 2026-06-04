@@ -43,7 +43,7 @@ export const generalStyleTabs = [
 export const newCardConfig = {
   img: {
     id: null,
-    url: "https://i.ibb.co/KjbH0QFg/card-2.jpg",
+    url: "",
     alt: "",
     title: "",
   },

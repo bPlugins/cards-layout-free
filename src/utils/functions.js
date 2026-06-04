@@ -146,7 +146,6 @@ export const themeSwitch = (theme = "default", attributes) =>
         };
         draft.columnGap = "30px",
           draft.rowGap = "40px",
-
           draft.baseCard = {
             borders: {
               color: "#ffffff12",

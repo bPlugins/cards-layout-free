@@ -28,7 +28,6 @@ if ( ! class_exists( 'PHCLBAdmin' ) ) {
 		 *
 		 * @return void
 		 */
-
 		public function __construct() {
 
 			add_action( 'init', array( $this, 'phclb_register_post_type' ) );
@@ -41,30 +40,28 @@ if ( ! class_exists( 'PHCLBAdmin' ) ) {
 		 *
 		 * @return void
 		 */
-
-		public function  phclb_register_post_type() {
+		public function phclb_register_post_type() {
 			$icon = "<svg xmlns='http://www.w3.org/2000/svg' fill='#fff' width='800px' height='800px' viewBox='0 0 52 52' enableBackground='new 0 0 52 52'><g><path d='M48,50H4c-1.1,0-2-0.9-2-2V4c0-1.1,0.9-2,2-2h44c1.1,0,2,0.9,2,2v44C50,49.1,49.1,50,48,50z M6,46h40V6H6 V46z'/></g><g><path d='M39,20H13c-0.6,0-1-0.4-1-1v-6c0-0.6,0.4-1,1-1h26c0.6,0,1,0.4,1,1v6C40,19.6,39.6,20,39,20z' /></g><g><path d='M19,40h-6c-0.6,0-1-0.4-1-1V27c0-0.6,0.4-1,1-1h6c0.6,0,1,0.4,1,1v12C20,39.6,19.6,40,19,40z' /></g><g><path d='M39,40H27c-0.6,0-1-0.4-1-1V27c0-0.6,0.4-1,1-1h12c0.6,0,1,0.4,1,1v12C40,39.6,39.6,40,39,40z' /></g></svg>";
-
 
 			register_post_type(
 				'cards-layout',
 				array(
-					'label'               => __( 'Cards Layout', 'cards-layout' ),
-					'labels'              => array(
+					'label'              => __( 'Cards Layout', 'cards-layout' ),
+					'labels'             => array(
 						'add_new'      => __( 'Add New Shortcode', 'cards-layout' ),
 						'add_new_item' => __( 'Add New Shortcode', 'cards-layout' ),
 						'edit_item'    => __( 'Edit Shortcode', 'cards-layout' ),
 						'not_found'    => __( 'No Shortcode found', 'cards-layout' ),
 					),
-					'supports'            => array( 'title', 'editor', 'revisions' ),
-					'show_in_rest'        => true,
-					'public'              => true,
-					'publicly_queryable'  => false,
-					'menu_icon'           => 'data:image/svg+xml;base64,' . base64_encode( $icon ),
-					'item_published'      => __( 'Cards Layout Published', 'cards-layout' ),
-					'item_updated'        => __( 'Cards Layout Updated', 'cards-layout' ),
-					'template'            => array( array( 'phclb/cards-layout' ) ),
-					'template_lock'       => 'all',
+					'supports'           => array( 'title', 'editor', 'revisions' ),
+					'show_in_rest'       => true,
+					'public'             => true,
+					'publicly_queryable' => false,
+					'menu_icon'          => 'data:image/svg+xml;base64,' . base64_encode( $icon ),
+					'item_published'     => __( 'Cards Layout Published', 'cards-layout' ),
+					'item_updated'       => __( 'Cards Layout Updated', 'cards-layout' ),
+					'template'           => array( array( 'phclb/cards-layout' ) ),
+					'template_lock'      => 'all',
 
 				)
 			);
@@ -94,14 +91,21 @@ if ( ! class_exists( 'PHCLBAdmin' ) ) {
 		 *
 		 * @return void
 		 */
-
 		public function phclb_render_demo_page() {
 
 			?>
 			<div id='phclb-admin-dashboard'
-				data-info='<?php echo esc_attr( wp_json_encode( array(
-								'version' => PHCLB_VERSION,
-							) ) ); ?>'></div>
+				data-info='
+				<?php
+				echo esc_attr(
+					wp_json_encode(
+						array(
+							'version' => PHCLB_VERSION,
+						)
+					)
+				);
+				?>
+							'></div>
 			<?php
 		}
 		/**
@@ -110,7 +114,6 @@ if ( ! class_exists( 'PHCLBAdmin' ) ) {
 		 * @param array $column Existing columns.
 		 * @return array Modified columns.
 		 */
-
 		public function phclb_set_custom_column_edit( $column ) {
 			unset( $column['date'] );
 			$column['shortcode'] = __( 'ShortCode', 'cards-layout' );
@@ -126,7 +129,6 @@ if ( ! class_exists( 'PHCLBAdmin' ) ) {
 		 * @param int    $post_id     Current post ID.
 		 * @return void
 		 */
-
 		public function phclb_manage_custom_column( $column_name, $post_id ) {
 
 			if ( 'shortcode' === $column_name ) {

@@ -33,6 +33,19 @@ export const dashboardInfo = (info) => {
 
     changelogs: [
       {
+        version: "2.0.3 - 4 June, 2026",
+        list: [
+          "Removed free-version frontend attribute restrictions that could be interpreted as locked functionality.",
+          "Refactored frontend rendering logic to ensure all available free features remain fully functional.",
+          "Fixed invalid GitHub repository URL in readme documentation.",
+          "Added complete External Services documentation for bPlugins API usage, including purpose, transmitted data, Terms of Service, and Privacy Policy references.",
+          "Improved shortcode rendering and output sanitization following WordPress security and escaping best practices.",
+          "Performed additional codebase audit for WordPress.org Plugin Directory compliance.",
+          "Updated plugin documentation and metadata.",
+          "General code cleanup and maintenance improvements.",
+        ],
+      },
+      {
         version: "2.0.2 - 13 May, 2026",
         list: [
           "Compliance update: Removed all gated features and trialware logic.",

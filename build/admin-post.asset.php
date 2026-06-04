@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array(), 'version' => '904a84c0981ee352e475');
+<?php if (!defined("ABSPATH")) exit; return array('dependencies' => array(), 'version' => '904a84c0981ee352e475');

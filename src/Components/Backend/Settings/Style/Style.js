@@ -4,12 +4,6 @@ import Feature from "./Layouts/Feature";
 import HeroFeature from "./Layouts/HeroFeature";
 import CardTag from './Elements/CardTag';
 
-
-
-
-
-
-
 const Style = ({ attributes, setAttributes, updateObject }) => {
   const { cardsLayout = {} } = attributes || {};
   const cardsWithTag = ["hero-feature", "achievement", "feature"];

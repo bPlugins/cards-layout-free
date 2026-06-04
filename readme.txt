@@ -1,10 +1,10 @@
 === Cards Layout ===
 Contributors: bplugins, abuhayat, asadsuzan, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: cards, card layout, showcase, grid,responsive
+Tags: block, cards, showcase, blogcard, grid
 Requires at least: 6.5
-Tested up to: 6.9
-Stable tag: 2.0.2
+Tested up to: 7.0
+Stable tag: 2.0.3
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -117,7 +117,26 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 4. Achievement Card
 5. Feature Card
 
+== Upgrade Notice ==
+
+= 2.0.3 =
+This version includes critical updates to comply with WordPress.org guidelines by removing external image CDN requests and updating the internal file architecture. We highly recommend upgrading to this version immediately.
+
+= 2.0.2 =
+Major compliance update. Removed all trialware, locked features, and gated premium logic from the free plugin to strictly adhere to WordPress.org guidelines. 
+
 == Changelog ==
+
+= 2.0.3 – 4 June, 2026 =
+* Removed free-version frontend attribute restrictions that could be interpreted as locked functionality.
+* Refactored frontend rendering logic to ensure all available free features remain fully functional.
+* Fixed invalid GitHub repository URL in readme documentation.
+* Added complete External Services documentation for bPlugins API usage, including purpose, transmitted data, Terms of Service, and Privacy Policy references.
+* Improved shortcode rendering and output sanitization following WordPress security and escaping best practices.
+* Performed additional codebase audit for WordPress.org Plugin Directory compliance.
+* Updated plugin documentation and metadata.
+* General code cleanup and maintenance improvements.
+
 
 = 2.0.2 – 13 May, 2026 =
 
@@ -178,25 +197,32 @@ Contribute, report bugs, or view the source code on GitHub  👉
 == External Services ==
 This plugin bundles the following third-party JavaScript/PHP libraries.
 
+= bPlugins Products API =
+- Endpoint: https://api.bplugins.com/
+- Used for: Displaying pricing and product information in the admin dashboard.
+- Data sent: Plugin ID (non-personal), no user data.
+- Terms of Service: https://bplugins.com/terms-of-service/
+- Privacy Policy: https://bplugins.com/privacy-policy/
+
+= Freemius (wp.freemius.com) =
+- Endpoint: https://wp.freemius.com/
+- Used for: Processing plugin opt-in consent form submissions.
+- Data sent: Only after explicit user opt-in — user name, email, site URL, WP/PHP version, plugin version.
+- Terms of Service: https://freemius.com/terms/
+- Privacy Policy: https://freemius.com/privacy/
+
 = SVG Icons (Font Awesome, Lucide, etc.) = 
  - Purpose: Provides scalable vector icons used for UI elements.
  - Note: This plugin does not load the full Font Awesome or Lucide libraries. Instead, specific icons are included directly as    inline SVGs in the source code to keep the plugin lightweight and performant.
 
-= Freemius Lite SDK =
-- Version: 2.2.0
-- Source: [https://bplugins.com/](https://bplugins.com/)
-- GitHub: [https://github.com/bPlugins/freemius-lite-sdk](https://github.com/bPlugins/freemius-lite-sdk)
-- License: GPL-2.0-or-later – [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
-- Purpose: Provides an opt-in consent form for usage tracking and analytics to help improve the plugin. No data is sent before explicit user consent.
-- External Services: Communicates with `api.bplugins.com` (activation events) and `wp.freemius.com` (opt-in processing) only after user opt-in. See [bPlugins Privacy Policy](https://bplugins.com/privacy-policy) and [Freemius Privacy Policy](https://freemius.com/privacy/).
+= WordPress.org Plugins API =
 
-= ImgBB (External Image Hosting) =
-
- - Endpoint: [https://i.ibb.co/](https://i.ibb.co/)
- - Data Sent: None (External resource request only).
- - Purpose: Provides default placeholder images for the block components.
- - Terms of Service: [https://imgbb.com/tos](https://imgbb.com/tos)
- - Privacy Policy: [https://imgbb.com/privacy](https://imgbb.com/privacy)
+- Service: WordPress.org Plugins Info API – `https://api.wordpress.org`
+- What it does: The dashboard queries the public WordPress.org Plugins API to list other plugins published by the author (titles, icons, ratings, active installs, etc.).
+- What data is sent: A public, read-only query request (e.g. `https://api.wordpress.org/plugins/info/1.2/?action=query_plugins&request[author]=bplugins`). No personal data is sent.
+- When: Only while an administrator is viewing the plugin's dashboard in wp-admin.
+- Terms of Service: [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
+- Privacy Policy: [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
 
 == Third-Party Libraries ==
 
@@ -222,4 +248,13 @@ This plugin bundles the following third-party JavaScript/PHP libraries.
 - License: GPL-2.0-or-later: [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
 - Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
 - External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: [https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made](https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made)
+
+= Freemius Lite SDK =
+- Version: 2.2.0
+- Source: [https://bplugins.com/](https://bplugins.com/)
+- GitHub: [https://github.com/bPlugins/freemius-lite-sdk](https://github.com/bPlugins/freemius-lite-sdk)
+- License: GPL-2.0-or-later – [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+- Purpose: Provides an opt-in consent form for usage tracking and analytics to help improve the plugin. No data is sent before explicit user consent.
+- External Services: Communicates with `api.bplugins.com` (activation events) and `wp.freemius.com` (opt-in processing) only after user opt-in. See [bPlugins Privacy Policy](https://bplugins.com/privacy-policy) and [Freemius Privacy Policy](https://freemius.com/privacy/).
+
 

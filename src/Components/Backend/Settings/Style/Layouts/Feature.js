@@ -3,13 +3,13 @@ import BaseCard from "../Elements/Default/BaseCard";
 import IconWrap from "../Elements/IconWrap";
 
 const Feature = (props) => {
-  const { attributes = {}, updateObject, isProTheme, premiumProps } = props;
+  const { attributes = {}, updateObject } = props;
 
   return (
     <>
-      <BaseCard {...{ attributes, updateObject, isProTheme, premiumProps }} />
-      <Content {...{ attributes, updateObject, isProTheme, premiumProps }} />
-      <IconWrap {...{ attributes, updateObject, isProTheme, premiumProps }} />
+      <BaseCard {...{ attributes, updateObject }} />
+      <Content {...{ attributes, updateObject }} />
+      <IconWrap {...{ attributes, updateObject }} />
     </>
   );
 };

@@ -21,10 +21,6 @@ const Settings = ({
 }) => {
 
 
-  // const siteLocation = `${siteUrl}/wp-admin/edit.php?post_type=cards-layout&page=demo_page#/pricing`;
-
-
-
   // update object
   const updateObject = (attr, key, val) => {
     const newAttr = { ...attributes[attr] };
