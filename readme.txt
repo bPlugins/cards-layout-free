@@ -1,7 +1,7 @@
 === Cards Layout ===
 Contributors: bplugins, abuhayat, asadsuzan, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, cards, showcase, blogcard, grid
+Tags: block,card layout,content cards,responsive cards,
 Requires at least: 6.5
 Tested up to: 7.0
 Stable tag: 2.0.3
