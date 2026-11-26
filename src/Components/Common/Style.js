@@ -9,8 +9,21 @@ import {
   isValidCSS,
 } from "../../../../bpl-tools/utils/getCSS";
 
+// Pro build only: the Pro layouts' runtime CSS. PHCLB_PRO is false in the free build, so
+// webpack drops this require.
+const proStyles = PHCLB_PRO ? require("../../pro/layoutStyles") : null;
+
+/*
+ * The layout presets in utils/functions.js save Inter as lowercase "inter". Google Fonts
+ * family names are case-sensitive, so that request always failed (HTTP 400): the font never
+ * loaded, the browser used its sans-serif fallback, and the request only sent visitors' IP
+ * addresses to Google. We skip the request but keep the CSS, so cards look exactly as before.
+ */
+const NEVER_LOADED_FONTS = ["inter"];
+
 const Style = ({ attributes, id }) => {
   const {
+    cardsLayout = {},
     columnGap,
     rowGap,
     title,
@@ -26,6 +39,28 @@ const Style = ({ attributes, id }) => {
   } = attributes;
 
   const { options = {}, styles = {} } = heroFeatureCardEle || {};
+  const { style: layoutStyle = "default" } = cardsLayout || {};
+
+  /*
+   * Google Font @imports, only for text the current layout actually shows. A font picked
+   * for another layout, or for a card tag that is turned off, is not downloaded.
+   */
+  const fontImports = [
+    title?.typo,
+    desc?.typo,
+    btn?.typo,
+    cardTag?.isSet && cardTag?.typo,
+    ...(PHCLB_PRO ? proStyles.proFontTypos(attributes) : []),
+    layoutStyle === "hero-feature" && options?.isShowBadge && styles?.badge?.typo,
+    layoutStyle === "hero-feature" && options?.isShowStat && styles?.stat?.num?.typo,
+    layoutStyle === "hero-feature" && options?.isShowStat && styles?.stat?.lbl?.typo,
+    layoutStyle === "achievement" && achievement?.achValue?.typo,
+  ]
+    .filter((typo) => typo && !NEVER_LOADED_FONTS.includes(typo?.fontFamily))
+    .map((typo) => getTypoCSS("", typo)?.googleFontLink)
+    .filter(Boolean);
+  const fontImportCSS = [...new Set(fontImports)].join("\n");
+
   const mainSl = `#${id}`;
   const singleCard = `${mainSl} .phclbCardsLayoutBlock .cardMainArea .singleCard`;
   const baseCardSl = `${singleCard} .phclb-card`;
@@ -34,19 +69,17 @@ const Style = ({ attributes, id }) => {
   const achievementCardSl = `${baseCardSl}.achievement-card`;
   const cardTagSl = `${baseCardSl} .card-tag`;
 
-
   return (
     <style
       dangerouslySetInnerHTML={{
         __html: `
-        ${getTypoCSS("", title?.typo)?.googleFontLink}
-        ${getTypoCSS("", desc?.typo)?.googleFontLink}
-        ${getTypoCSS("", btn?.typo)?.googleFontLink}
-        ${getTypoCSS("", cardTag?.typo)?.googleFontLink}
-        ${getTypoCSS("", styles?.badge?.typo)?.googleFontLink}
-        ${getTypoCSS("", achievement?.achValue?.typo)?.googleFontLink}
+        ${fontImportCSS}
+
         ${getTypoCSS(`${singleCard} .title h2, ${singleCard} .title h3`, title?.typo)?.styles}
+
         ${getTypoCSS(cardTagSl, cardTag?.typo)?.styles}
+     
+
         ${getTypoCSS(`${singleCard} .desc p`, desc?.typo)?.styles}
         ${getTypoCSS(`${singleCard} .btnArea a`, btn?.typo)?.styles}
         ${getTypoCSS(
@@ -64,7 +97,6 @@ const Style = ({ attributes, id }) => {
             styles?.stat?.lbl?.typo,
           )?.styles
           }
-       
         ${getTypoCSS(
             `${achievementCardSl} .ach-value`,
             achievement?.achValue?.typo,
@@ -78,6 +110,7 @@ const Style = ({ attributes, id }) => {
                 display: inline-block;
             ` : ""}
         }
+
 
 
          
@@ -108,6 +141,10 @@ const Style = ({ attributes, id }) => {
             color: ${desc?.color};
         }
 
+
+
+
+        
         ${singleCard} .btnArea a {
             ${getColorsCSS(btn?.colors)};
             padding:${getBoxValue(btn?.padding)};
@@ -210,7 +247,8 @@ const Style = ({ attributes, id }) => {
         ${achievement?.isAnimation === false ? `animation: none !important;` : ''}
         ${achievement?.animSpeed ? `animation-duration: ${achievement.animSpeed}s !important;` : ''}
     }
-    
+
+    ${PHCLB_PRO ? proStyles.proLayoutCSS(attributes, { mainSl, singleCard, baseCardSl }) : ""}
     `.trim(),
 
       }}

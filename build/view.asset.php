@@ -1,1 +1,1 @@
-<?php if (!defined("ABSPATH")) exit; return array('dependencies' => array('react', 'react-dom', 'wp-i18n'), 'version' => 'c3b7c39ee72218fea005');
+<?php return array('dependencies' => array('react', 'react-dom', 'wp-i18n'), 'version' => '10e704d0f35d2ac21b5e');

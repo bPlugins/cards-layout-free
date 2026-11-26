@@ -3,50 +3,36 @@ import Default from "./Layouts/Default";
 import Feature from "./Layouts/Feature";
 import HeroFeature from "./Layouts/HeroFeature";
 import CardTag from './Elements/CardTag';
+import { isPremiumTheme } from '../../../../utils/functions';
+import { layoutsWithTag } from '../../../../utils/options';
 
-const Style = ({ attributes, setAttributes, updateObject }) => {
+// Pro layouts' Style-tab panels: src/pro/editor.js (Pro build only).
+const proStylePanels = PHCLB_PRO ? require("../../../../pro/editor").proStylePanels : {};
+
+const stylePanels = {
+  default: Default,
+  feature: Feature,
+  "hero-feature": HeroFeature,
+  achievement: Achievement,
+  ...proStylePanels,
+};
+
+const Style = ({ attributes, setAttributes, updateObject, premiumProps = {} }) => {
   const { cardsLayout = {} } = attributes || {};
-  const cardsWithTag = ["hero-feature", "achievement", "feature"];
   const { style = "default" } = cardsLayout || {};
-
+  const isProTheme = isPremiumTheme(style);
+  const StylePanel = stylePanels[style];
 
   return (
     <>
-      {style === "default" && (
-        <>
-          <Default {...{ attributes, updateObject }} />
-        </>
+      {StylePanel && (
+        <StylePanel {...{ attributes, setAttributes, updateObject, premiumProps, isProTheme }} />
       )}
-
-      {style === "feature" && (
-        <>
-          <Feature {...{ attributes, updateObject }} />
-        </>
-      )}
-
-      {style === "hero-feature" && (
-        <>
-          <HeroFeature {...{ attributes, setAttributes, updateObject }} />
-        </>
-      )}
-
-      {style === "achievement" && (
-        <>
-          <Achievement {...{ attributes, setAttributes, updateObject }} />
-        </>
-      )}
-
-
       {
-        cardsWithTag.includes(style) && (
-          <CardTag {...{ attributes, updateObject }} />
+        layoutsWithTag.includes(style) && (
+          <CardTag {...{ attributes, updateObject, premiumProps, isProTheme }} />
         )
       }
-
-
-
-
-
     </>
   );
 };

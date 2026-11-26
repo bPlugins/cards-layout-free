@@ -11,6 +11,8 @@ import { BBlocksAds } from "../../../../../bpl-tools/Components";
 import BlockControl from "./General/Element/BlockControl";
 import { compose } from "@wordpress/compose";
 
+// "About Pro" modal opened by locked controls: Pro build only (the free build has no locks).
+const ProModal = PHCLB_PRO ? require("../../../pro/editor").ProModal : null;
 
 
 const Settings = ({
@@ -18,7 +20,15 @@ const Settings = ({
   setAttributes,
   activeIndex,
   setActiveIndex,
+  isPremium,
+  isProModalOpen,
+  setIsProModalOpen,
+  siteUrl,
 }) => {
+
+  const premiumProps = { isPremium, setIsProModalOpen };
+  const siteLocation = `${siteUrl}/wp-admin/edit.php?post_type=cards-layout&page=demo_page#/pricing`;
+
 
 
   // update object
@@ -34,7 +44,7 @@ const Settings = ({
     updateObject,
     activeIndex,
     setActiveIndex,
-
+    premiumProps,
   };
 
   return (
@@ -60,15 +70,21 @@ const Settings = ({
 
               {"style" === tab.name && (
                 <>
-                  <Style {...{ attributes, setAttributes, updateObject }} />
+                  <Style {...{ attributes, setAttributes, updateObject, premiumProps }} />
                 </>
               )}
             </>
           )}
         </TabPanel>
       </InspectorControls>
-      <BlockControl {...{ attributes, setAttributes }} />
-
+      <BlockControl {...{ attributes, setAttributes, isPro: isPremium }} />
+      {PHCLB_PRO && (
+        <ProModal
+          isProModalOpen={isProModalOpen}
+          setIsProModalOpen={setIsProModalOpen}
+          siteLocation={siteLocation}
+        />
+      )}
     </>
   );
 };

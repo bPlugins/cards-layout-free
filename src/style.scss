@@ -58,7 +58,8 @@
           }
 
           .card-icon-wrap {
-          
+            // width: 52px;
+            // height: 52px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -72,7 +73,11 @@
           }
 
           .card-tag {
-           
+            // font-size: 10px;
+            // font-weight: 700;
+            // letter-spacing: 0.1em;
+            // text-transform: uppercase;
+            // color: var(--text-muted);
             margin-bottom: 10px;
             display: flex;
             align-items: center;
@@ -105,7 +110,6 @@
         .title {
           margin-top: 10px;
         }
-
 
         .desc {
           margin-top: 5px;
@@ -189,6 +193,7 @@
         margin: 0;
       }
 
+
       .achievement-card {
         text-align: center;
         display: flex;
@@ -233,6 +238,21 @@
           transform: rotate(360deg);
         }
       }
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+    
 
     }
   }

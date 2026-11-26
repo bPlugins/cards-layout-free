@@ -1,12 +1,11 @@
-import { addSvgAttrs } from '../../../utils/functions'
-import { fallBackIconSvg } from '../../../utils/options'
+import { addSvgAttrs } from '../../../utils/common'
 
 const CardIcon = ({ svg }) => {
     return (
         <div
             className="card-icon-wrap"
             dangerouslySetInnerHTML={{
-                __html: addSvgAttrs(svg ? svg : fallBackIconSvg, {}),
+                __html: svg ? addSvgAttrs(svg, {}) : "",
             }}
         ></div>
     )

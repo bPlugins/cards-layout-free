@@ -1,113 +1,117 @@
-=== Cards Layout ===
-Contributors: bplugins, abuhayat, asadsuzan, btechnologies
-Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block,card layout,content cards,responsive cards,
-Requires at least: 6.5
-Tested up to: 7.0
-Stable tag: 2.0.3
+=== Cards Layout – showcase content in responsive card grids ===
+Contributors: bplugins, abuhayat, asadsuzan
+Tags: grid-layout, card-layout, content-cards, responsive-cards, gutenberg-block
+Tested up to: 7.1
+Stable tag: 2.0.4
 Requires PHP: 7.4
+Requires at least: 6.5
+Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-
-Build responsive, customizable card components with multiple layouts and dynamic styles in the Gutenberg editor.
+Build responsive card layouts in Gutenberg – feature cards, hero cards, achievement cards, and grids with full styling control. No code needed.
 
 == Description ==
 
-Cards Layout is a powerful and flexible WordPress Gutenberg block plugin designed to help you create stunning, professional-grade card components in seconds. 
+**Present features, profiles, and stats in stunning, professional-grade cards – built in seconds, right inside the Gutenberg editor.**
 
-Whether you need to highlight core features, showcase team profiles, display achievement metrics, or present your skill progress, Cards Layout provides a rich set of beautifully crafted, responsive components to elevate your website's design.
+[**Cards Layout**](https://bplugins.com/products/cards-layout/) | [**Pricing**](https://bplugins.com/products/cards-layout/pricing) | [**Support**](https://wordpress.org/support/plugin/cards-layout/) | [**Demos**](https://bplugins.com/products/cards-layout/#demos)
 
+### Why Cards Layout?
 
-[**Cards Layout**](https://bplugins.com/products/cards-layout/) | [**Pricing**](https://bplugins.com/products/cards-layout/pricing) | [**Support**](https://wordpress.org/support/plugin/cards-layout//) | [**Demos**](https://bplugins.com/products/cards-layout/#demos)
+**Cards Layout** is a powerful and flexible Gutenberg block plugin designed to help you create stunning, professional-grade card components in seconds – no page builder, no custom CSS.
 
-== Key Features ==
-* **Default Card:** The perfect minimal card for general content, featuring image, title, description, and button controls.
+Whether you need to highlight core features, showcase team profiles, display achievement metrics, or present skill progress, Cards Layout provides a rich set of beautifully crafted, responsive components to elevate your website's design. A native responsive grid engine and granular global styling controls mean every card looks perfect on desktop, tablet, and mobile.
 
-* **Hero Feature Card:** A prominent split-design card with advanced image focal point controls, overlay gradients, floating notification badges, and floating stat highlights.
+### Free Features
 
-* **Achievement Card:** Highlight your biggest wins with a large central metric and a customizable spinning SVG badge animation.
+- **Default Card:** The perfect minimal card for general content, featuring image, title, description, and button controls.
+- **Hero Feature Card:** A prominent split-design card with advanced image focal point controls, overlay gradients, floating notification badges, and floating stat highlights.
+- **Achievement Card:** Highlight your biggest wins with a large central metric and a customizable spinning SVG badge animation.
+- **Feature Card:** A sleek, modern card layout perfect for highlighting key features or benefits.
+- **Responsive Grid Engine:** Native control over column counts (Desktop, Tablet, Mobile) and gap spacing to build perfect grids instantly.
+- **Advanced Global Styling:** Granular control over everything from typography (fonts, sizes, weights) to multi-state box shadows, borders, padding, and alignments.
 
-* **Feature Card:** A sleek, modern card layout perfect for highlighting key features or benefits.
+### Pro Version
 
-* **Responsive Grid Engine:** Native control over column counts (Desktop, Tablet, Mobile) and gap spacing to build perfect grids instantly.
+The following premium layouts and advanced features are available exclusively in the standalone [**Cards Layout Pro**](https://bplugins.com/products/cards-layout/pricing) plugin (available on our website). These features are not included in the free version and require the separate Pro plugin to be installed.
 
-* **Advanced Global Styling:** Granular control over everything from typography (fonts, sizes, weights) to multi-state box shadows, borders, padding, and alignments.
+- **State / Counter Card:** Create dynamic statistic cards featuring up/down trend ribbons and customizable visual sparkline graphs.
+- **Progress Card:** Display skill levels or project progress with customizable gradient bars and individual metric tracking.
+- **Animated Service Card:** Stand out with glowing, animated border gradients and dynamic hover growth effects.
+- **Banner Card:** Build full-width promotional banners featuring stunning "Glassmorphism" blur effects and custom eyebrow taglines.
+- **Client Logo Card:** Professionally present brand partners with specialized minimal typographic cards and distinct hover color interactions.
+- **Creative Curve Card:** A highly stylized layout with a seamless CSS-curve cutout connecting your icon to your text content.
+- **Stacked Cards:** Cards stick and scale as visitors scroll, with peek, depth, speed and alternate-layout settings. The motion turns off when a visitor's device asks for reduced motion.
 
-== Pro Features  ==
-The following premium layouts and advanced features are available exclusively in the standalone **Cards Layout Pro** plugin (available on our website). These features are not included in this free version and require the separate Pro plugin to be installed.
+### How to Use – Quick Start
 
-* **State / Counter Card:** Create dynamic statistic cards featuring up/down trend ribbons and customizable visual sparkline graphs.
+1. Install and activate the **Cards Layout** plugin.
+2. In the Gutenberg editor, search for the **Cards Layout** block and add it to your page.
+3. Choose a card layout and add your image, title, description, and button.
+4. Fine-tune columns, spacing, typography, and styling from the right-side settings sidebar.
+5. Publish – your card grid is live!
 
-* **Progress Card:** Display skill levels or project progress with customizable gradient bars and individual metric tracking.
-* **Animated Service Card:** Stand out with glowing, animated border gradients and dynamic hover growth effects.
+### Use Cases
 
-* **Banner Card:** Build full-width promotional banners featuring stunning "Glassmorphism" blur effects and custom eyebrow taglines.
+- **Feature Highlights:** Present product or service benefits in clean, scannable cards.
+- **Team Profiles:** Showcase team members with image-led cards.
+- **Achievements & Metrics:** Display milestones and key numbers with animated badge cards.
+- **Landing Pages:** Build polished, responsive card grids that look great on every device.
 
-* **Client Logo Card:** Professionally present brand partners with specialized minimal typographic cards and distinct hover color interactions.
+Did you find a bug or have a feature request? [Please share your feedback with us](mailto:support@bplugins.com).
 
-* **Creative Curve Card:** A highly stylized layout with a seamless CSS-curve cutout connecting your icon to your text content.
-* **Feature Card:** Premium, sleek layout for displaying software or service features.
+### Check out our other WordPress Plugins
 
-
-== Feedback & Support ==
-
-Did you find a bug or have a feature request?  
-💁‍♂️ [Please share your feedback with us](mailto:support@bplugins.com)
-
-
-###  Check out our other WordPress Plugins
-
- 🎵**[Html5 Audio Player](https://bplugins.com/products/html5-audio-player)** – Best audio player plugin for WordPress.
+🎵 **[Html5 Audio Player](https://bplugins.com/products/html5-audio-player)** – Best audio player plugin for WordPress.
 
 🎬 **[Html5 Video Player](https://bplugins.com/products/html5-video-player)** – Best video player plugin for WordPress.
 
-📄**[PDF Poster](https://bplugins.com/products/pdf-poster)** – A fully-featured PDF Viewer Plugin for WordPress.
+📄 **[PDF Poster](https://bplugins.com/products/pdf-poster)** – A fully-featured PDF Viewer Plugin for WordPress.
 
-📑**[Document Embedder](https://bplugins.com/products/document-embedder)** – Best WordPress Document Embedder Plugin.
+📑 **[Document Embedder](https://bplugins.com/products/document-embedder)** – Best WordPress Document Embedder Plugin.
 
-🧊**[3D Viewer](https://bplugins.com/products/3d-viewer)** – Display interactive 3D models on the webs.
+🧊 **[3D Viewer](https://bplugins.com/products/3d-viewer)** – Display interactive 3D models on the webs.
 
-📰**[Advanced Post Block](https://bplugins.com/products/advanced-post-block)** – Best Post Display Plugin for WordPress.
-
-
+📰 **[Advanced Post Block](https://bplugins.com/products/advanced-post-block)** – Best Post Display Plugin for WordPress.
 
 == Installation ==
 
-### From Gutenberg Editor:
-1. Go to the WordPress Block/Gutenberg Editor
-2. Search For **Cards Layout**
-3. Click on the **Cards Layout** to add the block
+**From your WordPress dashboard (recommended):**
 
-### Download & Upload:
-1. Download the **Cards Layout** plugin (*.zip file*)
-2. In your admin area, go to the Plugins menu and click on **Add New**
-3. Click on **Upload Plugin** and choose the **`cards-layout.zip`** file and click on **Install Now**
-4. Activate the plugin and Enjoy!
+1. Go to **Plugins → Add New**.
+2. Search for **"Cards Layout"**.
+3. Click **Install Now**, then **Activate**.
+4. Add the **Cards Layout** block to any post or page from the Gutenberg editor.
 
-### Manually:
-1. Download and upload the **Cards Layout** plugin to the **`/wp-content/plugins/`** directory
-2. Activate the plugin through the Plugins menu in WordPress
+**Manual installation:**
 
+1. Download the plugin ZIP file and upload the folder to the `/wp-content/plugins/` directory (or upload the ZIP via **Plugins → Add New → Upload Plugin**).
+2. Activate the plugin through the **Plugins** menu in WordPress.
+3. Add the block from the Gutenberg editor and start building cards.
 
 == Frequently Asked Questions ==
 
 = Does it work with any WordPress theme? =
+Yes, it works with any standard WordPress theme.
 
-Yes, it will work with any standard WordPress theme.
+= Can I change the block settings? =
+Yes, you can change all block settings from the Gutenberg editor's right sidebar – layouts, columns, typography, shadows, borders, padding, and alignments.
 
-= Can I change block settings? =
+= How many times can I reuse the block? =
+There is no limit – you can use the block as many times as you want, on as many pages as you want.
 
-Yes, you can change block settings from the Gutenberg block editor's right sidebar.
+= Which card layouts are included for free? =
+The free version includes the Default Card, Hero Feature Card, Achievement Card, and Feature Card, plus the responsive grid engine and global styling controls.
 
-= How many times can I reuse a block? =
+= Are the cards responsive on mobile? =
+Yes. The responsive grid engine gives you separate column count controls for desktop, tablet, and mobile, along with gap spacing options.
 
-You can use unlimited times as you want.
+= Do I need to know how to code to use this plugin? =
+No. Everything is configured visually inside the Gutenberg editor – no coding required.
 
 = Where can I get support? =
-
-You can post your questions on the [support forum here](https://wordpress.org/support/plugin/cards-layout/)
-
+You can post your questions on the [support forum here](https://wordpress.org/support/plugin/cards-layout/).
 
 == Screenshots ==
 
@@ -115,17 +119,104 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 2. Default Design
 3. Hero Feature Card
 4. Achievement Card
-5. Feature Card
+5. State / Counter Card (Pro)
+6. Progress Card (Pro)
+7. Animated Service Card (Pro)
+8. Banner Card (Pro)
+9. Feature Card
+10. Client Logo Card (Pro)
+11. Creative Curve Card (Pro)
 
-== Upgrade Notice ==
+== Source Code ==
 
-= 2.0.3 =
-This version includes critical updates to comply with WordPress.org guidelines by removing external image CDN requests and updating the internal file architecture. We highly recommend upgrading to this version immediately.
+Contribute, report bugs, or view the source code on GitHub 👉
+[**Cards Layout GitHub**](https://github.com/bPlugins/cards-layout-free)
 
-= 2.0.2 =
-Major compliance update. Removed all trialware, locked features, and gated premium logic from the free plugin to strictly adhere to WordPress.org guidelines. 
+== External Services ==
+This plugin connects to the following external services.
+
+= bPlugins Products API =
+- Endpoint: https://api.bplugins.com/
+- Used for: Displaying pricing and product information in the admin dashboard.
+- Data sent: Plugin ID (non-personal), no user data.
+- Terms of Service: https://bplugins.com/terms-of-service/
+- Privacy Policy: https://bplugins.com/privacy-policy/
+
+= Freemius (wp.freemius.com) =
+- Endpoint: https://wp.freemius.com/
+- Used for: Processing plugin opt-in consent form submissions.
+- Data sent: Only after explicit user opt-in — user name, email, site URL, WP/PHP version, plugin version.
+- Terms of Service: https://freemius.com/terms/
+- Privacy Policy: https://freemius.com/privacy/
+
+= WordPress.org Plugins API =
+
+- Service: WordPress.org Plugins Info API – `https://api.wordpress.org`
+- What it does: The dashboard queries the public WordPress.org Plugins API to list other plugins published by the author (titles, icons, ratings, active installs, etc.).
+- What data is sent: A public, read-only query request (e.g. `https://api.wordpress.org/plugins/info/1.2/?action=query_plugins&request[author]=bplugins`). No personal data is sent.
+- When: Only while an administrator is viewing the plugin's dashboard in wp-admin.
+- Terms of Service: [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
+- Privacy Policy: [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
+
+= Google Fonts =
+
+- Service: Google Fonts – `https://fonts.googleapis.com` and `https://fonts.gstatic.com`
+- What it does: Card blocks load a font from Google only when you pick a Google font in a card block's Typography settings; with the default settings, they request no font. The plugin's Demo & Help dashboard in wp-admin loads the Lato and Roboto fonts from Google.
+- What data is sent: The browser requests the font files from Google, which receives its IP address and browser information (user agent): the visitor's for card blocks, the administrator's for the dashboard.
+- When: On pages that show a card block using a Google font, in the editor while you edit such a block, and while an administrator views the Demo & Help dashboard.
+- Terms of Service: [https://developers.google.com/fonts/terms](https://developers.google.com/fonts/terms)
+- Privacy Policy: [https://policies.google.com/privacy](https://policies.google.com/privacy)
+
+== Third-Party Libraries ==
+
+= Immer =
+- Version: 10.1.1
+- Source: [https://immerjs.github.io/immer/](https://immerjs.github.io/immer/)
+- GitHub: [https://github.com/immerjs/immer](https://github.com/immerjs/immer)
+- License: MIT
+- Purpose: Used for managing immutable state in a more convenient way.
+
+
+= React Router DOM =
+- Version: 7.14.1
+- Source: [https://reactrouter.com/]( https://reactrouter.com/)
+- GitHub: [https://github.com/remix-run/react-router](https://github.com/remix-run/react-router)
+- License: MIT
+- License URL: [https://github.com/remix-run/react-router/blob/main/LICENSE.md](https://github.com/remix-run/react-router/blob/main/LICENSE.md)
+- Purpose: Used for client-side routing and navigation within the plugin's React-based admin application and settings interface.
+- External Services: None. React Router DOM operates entirely within the browser and does not communicate with external services.
+
+= bpl-tools =
+- Source / GitHub: [https://github.com/bPlugins/bpl-tools](https://github.com/bPlugins/bpl-tools)
+- License: GPL-2.0-or-later: [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+- Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
+- External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: [https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made](https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made)
+
+= SVG Icons (Font Awesome Free, Lucide) =
+- Purpose: The icon picker in the block editor offers Font Awesome Free and Lucide icons.
+- How they are included: The icon sets are bundled in the editor script as inline SVG data. No icon fonts, stylesheets or CDN requests are used, and only the icons you choose are saved in your content and shown on your site.
+- Licenses: Font Awesome Free icons – CC BY 4.0 ([https://fontawesome.com/license/free](https://fontawesome.com/license/free)); Lucide – ISC ([https://lucide.dev/license](https://lucide.dev/license))
+
+= Freemius Lite SDK =
+- Version: 2.2.0
+- Source: [https://bplugins.com/](https://bplugins.com/)
+- GitHub: [https://github.com/bPlugins/freemius-lite-sdk](https://github.com/bPlugins/freemius-lite-sdk)
+- License: GPL-2.0-or-later – [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+- Purpose: Provides an opt-in consent form for usage tracking and analytics to help improve the plugin. No data is sent before explicit user consent.
+- External Services: Communicates with `api.bplugins.com` (activation events) and `wp.freemius.com` (opt-in processing) only after user opt-in. See [bPlugins Privacy Policy](https://bplugins.com/privacy-policy) and [Freemius Privacy Policy](https://freemius.com/privacy/).
 
 == Changelog ==
+
+= 2.0.4 – 6 August, 2026 =
+* New: Stacked Cards layout (Pro). Cards stick and scale as visitors scroll, with peek, depth, speed and alternate-layout settings. The motion turns off when a visitor's device asks for reduced motion.
+* New: Getting Started guides in the plugin dashboard for the block editor, shortcodes and Elementor.
+* Improved: The block now also shows up in the inserter when you search for features, services, team or stats.
+* Improved: Cards saved with the old externally hosted placeholder images (versions 1.1.0–2.0.2) now use smaller copies bundled with the plugin, so no third-party image request is made.
+* Fixed: Every card block requested a Google font that never loaded. Google Fonts now load only when you choose one, and only for parts of the card that are shown.
+* Fixed: Deleting the plugin no longer deletes your saved shortcode cards.
+* Fixed: Password-protected shortcode cards showed "Password:" with no field to type it in. The password field is back.
+* Fixed: With Cards Layout Pro also installed, the free plugin now steps aside instead of loading a second time and logging PHP warnings.
+* Developer: Card layouts now load through a shared layout registry.
 
 = 2.0.3 – 4 June, 2026 =
 * Removed free-version frontend attribute restrictions that could be interpreted as locked functionality.
@@ -187,74 +278,13 @@ Major compliance update. Removed all trialware, locked features, and gated premi
 = 1.0.0 =
 * Initial Release
 
+== Upgrade Notice ==
 
+= 2.0.4 =
+Recommended: deleting the plugin no longer removes your saved shortcode cards, card blocks stop making a failing Google Fonts request, and old externally hosted placeholder images are served from the plugin. Adds the Stacked Cards layout (Pro).
 
-== Source Code ==
+= 2.0.3 =
+This version includes critical updates to comply with WordPress.org guidelines by removing external image CDN requests and updating the internal file architecture. We highly recommend upgrading to this version immediately.
 
-Contribute, report bugs, or view the source code on GitHub  👉
-[**Cards Layout GitHub**](https://github.com/bPlugins/cards-layout-free)
-
-== External Services ==
-This plugin bundles the following third-party JavaScript/PHP libraries.
-
-= bPlugins Products API =
-- Endpoint: https://api.bplugins.com/
-- Used for: Displaying pricing and product information in the admin dashboard.
-- Data sent: Plugin ID (non-personal), no user data.
-- Terms of Service: https://bplugins.com/terms-of-service/
-- Privacy Policy: https://bplugins.com/privacy-policy/
-
-= Freemius (wp.freemius.com) =
-- Endpoint: https://wp.freemius.com/
-- Used for: Processing plugin opt-in consent form submissions.
-- Data sent: Only after explicit user opt-in — user name, email, site URL, WP/PHP version, plugin version.
-- Terms of Service: https://freemius.com/terms/
-- Privacy Policy: https://freemius.com/privacy/
-
-= SVG Icons (Font Awesome, Lucide, etc.) = 
- - Purpose: Provides scalable vector icons used for UI elements.
- - Note: This plugin does not load the full Font Awesome or Lucide libraries. Instead, specific icons are included directly as    inline SVGs in the source code to keep the plugin lightweight and performant.
-
-= WordPress.org Plugins API =
-
-- Service: WordPress.org Plugins Info API – `https://api.wordpress.org`
-- What it does: The dashboard queries the public WordPress.org Plugins API to list other plugins published by the author (titles, icons, ratings, active installs, etc.).
-- What data is sent: A public, read-only query request (e.g. `https://api.wordpress.org/plugins/info/1.2/?action=query_plugins&request[author]=bplugins`). No personal data is sent.
-- When: Only while an administrator is viewing the plugin's dashboard in wp-admin.
-- Terms of Service: [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
-- Privacy Policy: [https://wordpress.org/about/privacy/](https://wordpress.org/about/privacy/)
-
-== Third-Party Libraries ==
-
-= Immer =
-- Version: 11.1.8
-- Source: [https://immerjs.github.io/immer/](https://immerjs.github.io/immer/)
-- GitHub: [https://github.com/immerjs/immer](https://github.com/immerjs/immer)
-- License: MIT
-- Purpose: Used for managing immutable state in a more convenient way.
-
-
-= React Router DOM =
-- Version: 7.15.0
-- Source: [https://reactrouter.com/]( https://reactrouter.com/)
-- GitHub: [https://github.com/remix-run/react-router](https://github.com/remix-run/react-router)
-- License: MIT
-- License URL: [https://github.com/remix-run/react-router/blob/main/LICENSE.md](https://github.com/remix-run/react-router/blob/main/LICENSE.md)
-- Purpose: Used for client-side routing and navigation within the plugin's React-based admin application and settings interface.
-- External Services: None. React Router DOM operates entirely within the browser and does not communicate with external services.
-
-= bpl-tools =
-- Source / GitHub: [https://github.com/bPlugins/bpl-tools](https://github.com/bPlugins/bpl-tools)
-- License: GPL-2.0-or-later: [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
-- Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
-- External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: [https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made](https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made)
-
-= Freemius Lite SDK =
-- Version: 2.2.0
-- Source: [https://bplugins.com/](https://bplugins.com/)
-- GitHub: [https://github.com/bPlugins/freemius-lite-sdk](https://github.com/bPlugins/freemius-lite-sdk)
-- License: GPL-2.0-or-later – [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
-- Purpose: Provides an opt-in consent form for usage tracking and analytics to help improve the plugin. No data is sent before explicit user consent.
-- External Services: Communicates with `api.bplugins.com` (activation events) and `wp.freemius.com` (opt-in processing) only after user opt-in. See [bPlugins Privacy Policy](https://bplugins.com/privacy-policy) and [Freemius Privacy Policy](https://freemius.com/privacy/).
-
-
+= 2.0.2 =
+Major compliance update. Removed all trialware, locked features, and gated premium logic from the free plugin to strictly adhere to WordPress.org guidelines.

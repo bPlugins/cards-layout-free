@@ -2,10 +2,10 @@ import { produce } from "immer";
 import Content from "../Element/Content";
 import { IconLibrary } from "../../../../../../../bpl-tools/Components";
 import { __ } from "@wordpress/i18n";
+import { renderControl } from "../../../../../utils/functions";
 
 
-
-const FeatureCardPanel = ({ attributes, setAttributes, arrKey, index }) => {
+const FeatureCardPanel = ({ attributes, setAttributes, arrKey, index, isProTheme, premiumProps }) => {
   const cards = attributes[arrKey];
   const { isContent } = attributes;
   const { title, img, desc, altText, svg = "" } = cards[index];
@@ -23,14 +23,17 @@ const FeatureCardPanel = ({ attributes, setAttributes, arrKey, index }) => {
   return (
     <>
       <div key={index} className="components_button_main">
-        <IconLibrary
-          label={__("Insert Icon", "cards-layout")}
-          value={svg}
-          onChange={(val) => {
-            updateCard("svg", val);
-          }}
-        />
-
+        {renderControl({
+          Component: IconLibrary,
+          props: {
+            className: "mt10",
+            label: __("Insert Icon", "cards-layout"),
+            value: svg,
+            onChange: (val) => updateCard("svg", val),
+          },
+          premiumProps,
+          isProTheme,
+        })}
         <Content
           isContent={isContent}
           img={img}
@@ -38,7 +41,8 @@ const FeatureCardPanel = ({ attributes, setAttributes, arrKey, index }) => {
           desc={desc}
           altText={altText}
           updateCard={updateCard}
-
+          isProTheme={isProTheme}
+          premiumProps={premiumProps}
         />
 
       </div>

@@ -5,6 +5,16 @@
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
+	"files": [
+		"cards-layout.php",
+		"cards-layout-block.php",
+		"uninstall.php",
+		"readme.txt",
+		"includes/",
+		"languages/",
+		"vendor/",
+		"build/"
+	],
 	"scripts": {
 		"packages-update": "wp-scripts packages-update",
 		"lint": "eslint src",
@@ -13,16 +23,18 @@
 		"format": "wp-scripts format",
 		"start": "wp-scripts start --webpack-copy-php",
 		"build": "wp-scripts build --webpack-copy-php",
+		"check:free": "node scripts/check-free-build.js",
+		"zip": "node scripts/make-zip.js free",
 		"i18n-pot": "wp i18n make-pot . languages/cards-layout.pot --exclude=\"src\" && cp ./languages/cards-layout.pot ./languages/cards-layout-en_US.po",
 		"i18n-json": "wp i18n make-json languages/ --no-purge",
 		"i18n-mo": "wp i18n make-mo languages/",
 		"i18n": "npm run i18n-pot && npm run i18n-json && npm run i18n-mo",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"bundle": "npm run lint && npm run build && npm run i18n && npm run plugin-zip"
+		"bundle": "npm run lint && npm run build && npm run check:free && npm run i18n && npm run plugin-zip"
 	},
 	"dependencies": {
-		"immer": "^11.1.8",
-		"react-router-dom": "^7.15.0"
+		"immer": "^10.1.1",
+		"react-router-dom": "^7.8.0"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^27.9.0",

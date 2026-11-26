@@ -4,69 +4,87 @@ import {
   Background,
   ColorControl,
 } from "../../../../../../../bpl-tools/Components";
+import { renderControl } from '../../../../../utils/functions';
 
-
-const IconWrap = ({ attributes, updateObject }) => {
+const IconWrap = ({ attributes, updateObject, premiumProps = {}, isProTheme = false }) => {
   const { iconWrap = {} } = attributes || {};
-
+  const controlBase = { premiumProps, isProTheme };
   return (
     <PanelBody
-      className="bPlPanelBody"
+      className="phPanelBody"
       title={__("Icon", "cards-layout")}
       initialOpen={false}
     >
       {/* 1. Icon Size */}
-
-
-      <RangeControl
-        label={__("Icon Size:", "cards-layout")}
-        value={iconWrap?.size}
-        onChange={(val) => updateObject("iconWrap", "size", val)}
-        min={10}
-      />
-
+      {
+        renderControl({
+          Component: RangeControl,
+          props: {
+            label: __("Icon Size:", "cards-layout"),
+            value: iconWrap?.size,
+            onChange: (val) => updateObject("iconWrap", "size", val),
+            min: 10,
+          },
+          ...controlBase,
+        })
+      }
       {/* 2. Icon Color */}
-
-
-      <ColorControl
-        className="mt10"
-        label={__("Color", "cards-layout")}
-        value={iconWrap?.color}
-        onChange={(val) => updateObject("iconWrap", "color", val)}
-      />
+      {
+        renderControl({
+          Component: ColorControl,
+          props: {
+            className: "mt20",
+            label: __("Icon Color:", "cards-layout"),
+            value: iconWrap?.color,
+            onChange: (val) => updateObject("iconWrap", "color", val),
+          },
+          ...controlBase,
+        })
+      }
 
       {/* 3. Icon Background */}
-
-      <Background
-        className="mt10"
-        label={__("Background:", "cards-layout")}
-        value={iconWrap?.bg}
-        onChange={(val) => updateObject("iconWrap", "bg", val)}
-      />
+      {
+        renderControl({
+          Component: Background,
+          props: {
+            className: "mt20",
+            label: __("Background:", "cards-layout"),
+            value: iconWrap?.bg,
+            onChange: (val) => updateObject("iconWrap", "bg", val),
+          },
+          ...controlBase,
+        })
+      }
 
 
       {/* 4. Radius */}
-
-
-      <RangeControl
-        label={__("Radius:", "cards-layout")}
-        value={iconWrap?.radius}
-        onChange={(val) => updateObject("iconWrap", "radius", val)}
-        min={0}
-        max={50}
-      />
-
+      {
+        renderControl({
+          Component: RangeControl,
+          props: {
+            label: __("Radius:", "cards-layout"),
+            value: iconWrap?.radius,
+            onChange: (val) => updateObject("iconWrap", "radius", val),
+            min: 0,
+            max: 50,
+          },
+          ...controlBase,
+        })
+      }
 
       {/* 5. Border */}
-
-
-
-      <BorderControl
-        className="mt20"
-        label={__("Borders:", "cards-layout")}
-        value={iconWrap?.borders}
-        onChange={(val) => updateObject("iconWrap", "borders", val)}
-      />
+      {
+        renderControl({
+          Component: BorderControl,
+          props: {
+            className: "mt20",
+            label: __("Borders:", "cards-layout"),
+            value: iconWrap?.borders,
+            onChange: (val) => updateObject("iconWrap", "borders", val),
+          },
+          ...controlBase,
+        })
+      }
     </PanelBody>
   );
 };

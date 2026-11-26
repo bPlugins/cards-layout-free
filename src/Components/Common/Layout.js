@@ -1,29 +1,24 @@
-import { isValidURL } from "../../utils/functions";
-import AchievementCard from "./Layouts/AchievementCard";
-import Default from "./Layouts/Default";
-import FeatureCard from "./Layouts/FeatureCard";
-import HeroFeatureCard from "./Layouts/HeroFeatureCard";
+import { isValidURL } from "../../utils/common";
+import { getCardLayout } from "./Layouts";
+import useLayoutBehavior from "./useLayoutBehavior";
 
-
+/*
+ * Renders the cards with the layout in `attributes`. Callers resolve which layout to use first
+ * (resolveLayout in ./Layouts), so a Pro layout that isn't available already arrives here as the
+ * Default layout - nothing is ever locked or blurred for visitors.
+ */
 const Layout = ({ attributes, isEditor = false, activeIndex = 0, onClick }) => {
   const { cards, columns, cardStyle, cardsLayout } = attributes;
   const { style } = cardsLayout;
   const { newTab } = cardStyle;
 
-  const layouts = {
-    default: Default,
-    feature: FeatureCard,
-    "hero-feature": HeroFeatureCard,
-    achievement: AchievementCard,
-
-  };
-  const LayoutComponent = layouts[style] || Default;
-
+  const { Component: LayoutComponent, hasInnerLinks } = getCardLayout(style);
+  const cardAreaRef = useLayoutBehavior(attributes);
 
   return (
-    <div className={`phclbCardsLayoutBlock`} style={{ position: "relative" }}>
-
+    <div className="phclbCardsLayoutBlock" style={{ position: "relative" }}>
       <div
+        ref={cardAreaRef}
         className={`cardMainArea ${style} columns-${columns.desktop} columns-tablet-${columns.tablet} columns-mobile-${columns.mobile}`}
       >
         {cards.map((card, index) => {
@@ -37,7 +32,9 @@ const Layout = ({ attributes, isEditor = false, activeIndex = 0, onClick }) => {
               className={className}
             />
           );
-          const isClickable = isValidURL(card?.cUrl) && !isEditor;
+          // Layouts that render their own anchor are never wrapped in a second one.
+          const isClickable =
+            isValidURL(card?.cUrl) && !isEditor && !hasInnerLinks;
           return isClickable ? (
             <a
               target={newTab ? "_blank" : "_self"}

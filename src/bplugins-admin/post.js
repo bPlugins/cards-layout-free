@@ -1,5 +1,6 @@
 import './post.scss';
 
+// Called from the Shortcode column of the Cards Layout list (see includes/class-phclbAdmin.php).
 window.phclb_copy_admin_shortcode = id => {
 	var input = document.querySelector('#phclb-admin-shortcode-' + id + ' input');
 	var tooltip = document.querySelector('#phclb-admin-shortcode-' + id + ' .tooltip');
