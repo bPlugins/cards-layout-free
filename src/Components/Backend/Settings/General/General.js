@@ -3,8 +3,11 @@ import Panel from "./Panel/Panel";
 import Default from "./Layouts/Default";
 import HeroFeatureCard from "./Layouts/HeroFeatureCard";
 import CardTag from './Element/CardTage';
-import { AdvertiseCard } from '../../../../../../bpl-tools/ProControls';
+import { isPremiumTheme } from '../../../../utils/functions';
+import { layoutsWithTag } from '../../../../utils/options';
 
+// Pro layouts' General-tab panels: src/pro/editor.js (Pro build only).
+const proGeneralPanels = PHCLB_PRO ? require("../../../../pro/editor").proGeneralPanels : {};
 
 const General = ({
   attributes,
@@ -12,48 +15,48 @@ const General = ({
   updateObject,
   activeIndex,
   setActiveIndex,
-
+  premiumProps,
 }) => {
 
   const { cardsLayout = {} } = attributes || {};
   const { style = "default" } = cardsLayout || {};
-  const cardsWithTag = ["hero-feature", "achievement", "feature"];
-
+  const isProTheme = isPremiumTheme(attributes?.cardsLayout?.style);
+  const ProGeneral = proGeneralPanels[style];
 
   return (
     <>
       {/*==============
-          layout 
+          layout
      =============  */}
-      <Layout {...{ attributes, setAttributes }} />
+      <Layout {...{ attributes, setAttributes, premiumProps, isProTheme }} />
 
       {/*==============
         Items Panel
      =============  */}
-      <Panel {...{ attributes, setAttributes, activeIndex, setActiveIndex }} />
+      <Panel {...{ attributes, setAttributes, activeIndex, setActiveIndex, premiumProps, isProTheme }} />
 
       {/*==============
         Default Card Elements
      =============  */}
       {style === "default" && (
-        <Default {...{ attributes, setAttributes, updateObject }} />
+        <Default {...{ attributes, setAttributes, updateObject, premiumProps, isProTheme }} />
       )}
       {/*==============
        Hero Feature Card Elements
      =============  */}
       {style === "hero-feature" && (
-        <HeroFeatureCard {...{ attributes, setAttributes }} />
+        <HeroFeatureCard {...{ attributes, setAttributes, premiumProps, isProTheme }} />
+      )}
+      {ProGeneral && (
+        <ProGeneral {...{ attributes, setAttributes, updateObject, premiumProps, isProTheme }} />
       )}
 
-
       {
-        cardsWithTag.includes(style) && (
-          <CardTag {...{ attributes, setAttributes }} />
+        layoutsWithTag.includes(style) && (
+          <CardTag {...{ attributes, setAttributes, premiumProps, isProTheme }} />
         )
       }
 
-
-      <AdvertiseCard planLink={'https://bplugins.com/products/cards-layout/pricing'} />
 
 
     </>

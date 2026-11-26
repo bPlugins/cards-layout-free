@@ -5,8 +5,8 @@ import {
   SelectControl,
   __experimentalUnitControl as UnitControl,
 } from "@wordpress/components";
-import { __ } from "@wordpress/i18n";
-import { cardsOpt } from "../../../../../utils/options";
+import { __, _n, sprintf } from "@wordpress/i18n";
+import { cardsOpt, proLayoutNames } from "../../../../../utils/options";
 import { useState } from "@wordpress/element";
 import { Label } from "../../../../../../../bpl-tools/Components";
 import { BDevice } from "../../../../../../../bpl-tools/Components/Deprecated";
@@ -16,7 +16,10 @@ import {
   pxUnit,
 } from "../../../../../../../bpl-tools/utils/options";
 import { themeSwitch } from '../../../../../utils/functions';
-import { PremiumPanel } from '../../../../../../../bpl-tools/ProControls';
+
+// Free build only: a note listing the Pro layouts, with demo and pricing links. Nothing in the
+// free build is locked; the Pro layouts are simply not part of it.
+const PremiumPanel = PHCLB_PRO ? null : require("../../../../../../../bpl-tools/ProControls/PremiumPanel").default;
 
 
 const Layout = ({ attributes, setAttributes }) => {
@@ -34,9 +37,9 @@ const Layout = ({ attributes, setAttributes }) => {
           layout
      =============  */}
       <PanelBody
-        className="bPlPanelBody"
+        className="phPanelBody"
         title={__("Layout", "cards-layout")}
-        initialOpen={true}
+        initialOpen={false}
       >
         <SelectControl
           className="mt10"
@@ -48,12 +51,27 @@ const Layout = ({ attributes, setAttributes }) => {
             setAttributes(themeSwitch(val, attributes));
           }}
         />
-        <PremiumPanel
-          title={__('Premium Layouts', 'cards-layout')}
-          description={__('Get access to 6 more layouts.', 'cards-layout')}
-          pricingUrl="https://bplugins.com/products/cards-layout/pricing/"
-          demoUrl="https://bplugins.com/products/cards-layout/#demos" // Optional
-        />
+
+        {!PHCLB_PRO && (
+          <PremiumPanel
+            title={__("Premium Layouts", "cards-layout")}
+            description={sprintf(
+              /* translators: 1: number of Pro layouts, 2: comma-separated layout names */
+              _n(
+                "%1$d more layout in Cards Layout Pro: %2$s.",
+                "%1$d more layouts in Cards Layout Pro: %2$s.",
+                proLayoutNames.length,
+                "cards-layout",
+              ),
+              proLayoutNames.length,
+              proLayoutNames.join(", "),
+            )}
+            pricingUrl="https://bplugins.com/products/cards-layout/pricing/"
+            demoUrl="https://bplugins.com/products/cards-layout/#demos"
+            buttonLabel={__("Get Pro", "cards-layout")}
+          />
+        )}
+
         <PanelRow>
           <Label mt="0">{__("Columns:", "cards-layout")}</Label>
           <BDevice device={device} onChange={(val) => setDevice(val)} />
@@ -89,10 +107,6 @@ const Layout = ({ attributes, setAttributes }) => {
           units={[pxUnit(40), perUnit(3), emUnit(2.5)]}
           isResetValueOnUnitChange={true}
         />
-
-
-
-
       </PanelBody>
     </>
   );

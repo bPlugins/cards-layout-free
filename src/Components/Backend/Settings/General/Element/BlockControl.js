@@ -5,7 +5,7 @@ import ThemeSwitcher from "../../../themeSwitch/ThemeSwitcher";
 import { __ } from "@wordpress/i18n";
 import { cardsOpt, newCardConfig } from "../../../../../utils/options";
 import { themeSwitch } from "../../../../../utils/functions";
-const BlockControl = ({ attributes, setAttributes }) => {
+const BlockControl = ({ attributes, setAttributes, isPro }) => {
   const { cards = [], cardStyle = {}, cardsLayout = {} } = attributes;
   return (
     <BlockControls>
@@ -31,10 +31,11 @@ const BlockControl = ({ attributes, setAttributes }) => {
       />
       <ThemeSwitcher
         themes={cardsOpt || []}
+        isPro={isPro}
         isTooltip={true}
         visibleCount={6}
         value={cardsLayout?.style || "default"}
-        buttonLabel={"More Layouts"}
+        buttonLabel={__("More Layouts", "cards-layout")}
         onChange={(val) => {
           setAttributes(themeSwitch(val, attributes));
         }}

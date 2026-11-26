@@ -1,0 +1,3 @@
+# Tracked files that `npm run export:free` (in the main Cards Layout repository) must not delete.
+# One path per line; a folder keeps everything inside it.
+todo.txt

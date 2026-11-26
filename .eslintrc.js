@@ -16,7 +16,9 @@ module.exports = {
 	],
 	globals: {
 		wp: 'readonly',
-		jQuery: 'readonly'
+		jQuery: 'readonly',
+		// Build flag: true in the Pro build, false in the free build (see webpack.config.js).
+		PHCLB_PRO: 'readonly'
 	},
 	parserOptions: {
 		ecmaFeatures: {

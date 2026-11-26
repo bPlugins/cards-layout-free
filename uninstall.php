@@ -1,42 +1,25 @@
 <?php
 /**
- * Fired when the plugin is uninstalled.
+ * Runs when Cards Layout is deleted from the Plugins screen.
  *
- * @link       http://bplugins.com
- * @since      1.0.0
+ * Uninstalling deliberately keeps everything users created:
+ * - Saved shortcode cards ("cards-layout" posts) are user content, and Cards Layout Pro uses the
+ *   same post type. Deleting them here would wipe a Pro user's cards when they remove the old
+ *   free plugin, and every page using those shortcodes would go blank.
+ * - Card blocks are stored inside posts and pages, so they are never touched.
+ * - The plugin stores no settings of its own, so there is nothing else to clean up.
  *
- * @package    Cards_Layout
+ * Keep this file even though it removes nothing. When it is missing, WordPress runs any uninstall
+ * hook the plugin registered instead; Freemius Lite SDK 2.1.3, used until 2.0.4, registered one
+ * that caused a fatal error on PHP 8.
+ *
+ * If a cleanup option is ever added, it must be something the user turns on themselves, and it
+ * must never delete the "cards-layout" posts while Cards Layout Pro is installed.
+ *
+ * @package Cards_Layout
  */
 
-// Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
-// If uninstall not called from WordPress, then exit.
+// Only run when WordPress is uninstalling the plugin.
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
-
-/**
- * Cleanup logic:
- * 1. Delete all 'cards-layout' custom posts.
- */
-
-$PHCLB_cards = get_posts(
-	array(
-		'post_type'      => 'cards-layout',
-		'post_status'    => 'any',
-		'numberposts'    => -1,
-		'fields'         => 'ids',
-	)
-);
-
-if ( ! empty( $PHCLB_cards ) ) {
-	foreach ( $PHCLB_cards as $PHCLB_card_id ) {
-		wp_delete_post( $PHCLB_card_id, true );
-	}
-}
-
-// Freemius handles its own cleanup if the SDK is used correctly.
-// No other options or custom tables found in the plugin.

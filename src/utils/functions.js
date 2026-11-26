@@ -1,24 +1,16 @@
+/**
+ * Editor-only helpers. Never import this file from src/Components/Common or src/view.js:
+ * it pulls in bpl-tools ProControls (and with it @wordpress/components). Helpers the front
+ * end needs live in ./common.js and are re-exported below for existing editor imports.
+ */
 import { produce } from "immer";
-import { cardTagTypoConfig } from './options';
-// Function to check if a string is a valid URL
-export function isValidURL(str) {
-  if (!str) {
-    return false;
-  }
-  try {
-    new URL(str);
-    return true;
-  } catch (err) {
-    return false;
-  }
-}
+// import { heroFeatureCardTypoConfig } from "./options";
 
-export const addSvgAttrs = (svgString, attrs = {}) => {
-  let extra = Object.entries(attrs)
-    .map(([key, value]) => `${key}="${value}"`)
-    .join(" ");
-  return svgString.replace("<svg", `<svg ${extra}`);
-};
+// Pro build only: locks the controls of Pro layouts. PHCLB_PRO is false in the free build, so
+// webpack drops this require and no locking code ships in the free plugin or its source.
+const lockedControl = PHCLB_PRO ? require('../pro/lockedControl').default : null;
+
+export { isValidURL, addSvgAttrs, isPremiumTheme } from './common';
 
 // theme switcher
 export const themeSwitch = (theme = "default", attributes) =>
@@ -146,6 +138,7 @@ export const themeSwitch = (theme = "default", attributes) =>
         };
         draft.columnGap = "30px",
           draft.rowGap = "40px",
+
           draft.baseCard = {
             borders: {
               color: "#ffffff12",
@@ -183,6 +176,9 @@ export const themeSwitch = (theme = "default", attributes) =>
 
         draft.title.color = "#F1F1F8",
           draft.desc.color = "#9191A8",
+
+
+
           draft.btn = {
             padding: {
               top: "10px",
@@ -320,7 +316,16 @@ export const themeSwitch = (theme = "default", attributes) =>
         );
 
         draft.cardTag = {
-          ...cardTagTypoConfig,
+          typo: {
+            fontSize: {
+              desktop: 11,
+              tablet: 11,
+              mobile: 11,
+            },
+            letterSpace: "0.06em",
+            fontFamily: "inter",
+            fontWeight: 700,
+          },
           isSet: true,
           text: "Hero Feature Card",
           color: "#4B4B61"
@@ -401,7 +406,16 @@ export const themeSwitch = (theme = "default", attributes) =>
           },
         };
         draft.cardTag = {
-          ...cardTagTypoConfig,
+          typo: {
+            fontSize: {
+              desktop: 11,
+              tablet: 11,
+              mobile: 11,
+            },
+            letterSpace: "0.06em",
+            fontFamily: "inter",
+            fontWeight: 700,
+          },
           isSet: true,
           text: "Achievement Card",
           color: "#4B4B61"
@@ -551,7 +565,16 @@ export const themeSwitch = (theme = "default", attributes) =>
           },
         };
         draft.cardTag = {
-          ...cardTagTypoConfig,
+          typo: {
+            fontSize: {
+              desktop: 11,
+              tablet: 11,
+              mobile: 11,
+            },
+            letterSpace: "0.06em",
+            fontFamily: "inter",
+            fontWeight: 700,
+          },
           isSet: true,
           text: "Feature Card",
           color: "#4B4B61"
@@ -605,10 +628,18 @@ export const themeSwitch = (theme = "default", attributes) =>
           },
         );
       },
-
     }[theme];
 
+    // Presets for the Pro layouts live in src/pro/presets.js (Pro build only).
+    const proPreset = PHCLB_PRO ? require("../pro/presets").proPresets[theme] : undefined;
+
     if (cfg) cfg();
+    else if (proPreset) proPreset(draft, applyTypo);
   });
 
-
+/**
+ * Renders a settings control. In the Pro build, a control of a Pro layout stays locked until the
+ * Pro license is activated (src/pro/lockedControl.js); otherwise it's the normal control.
+ */
+export const renderControl = ({ Component, props, premiumProps = {}, isProTheme = false }) =>
+  lockedControl?.({ Component, props, premiumProps, isProTheme }) ?? <Component {...props} />;

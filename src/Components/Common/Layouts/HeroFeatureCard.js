@@ -1,4 +1,4 @@
-import heroImg from "../../../../assets/images/card-2.jpg";
+import { getCardImageUrl, heroPlaceholderPhoto } from "../../../utils/common";
 
 const HeroFeatureCard = ({ card, className, attributes }) => {
   const { img = {}, focalPoint = {}, badge = {}, stat = {} } = card;
@@ -7,7 +7,7 @@ const HeroFeatureCard = ({ card, className, attributes }) => {
   const { options = {} } = heroFeatureCardEle || {};
 
   const style = {
-    backgroundImage: `url(${img?.url || heroImg})`,
+    backgroundImage: `url(${getCardImageUrl(img, heroPlaceholderPhoto)})`,
     backgroundPosition: `${(focalPoint?.x || 0.5) * 100}% ${(focalPoint?.y || 0.5) * 100
       }%`,
     backgroundSize: "cover",

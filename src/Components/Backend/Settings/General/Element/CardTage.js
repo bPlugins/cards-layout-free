@@ -1,13 +1,17 @@
 import { __ } from "@wordpress/i18n";
 import { PanelBody, PanelRow, TextControl, ToggleControl } from "@wordpress/components";
 import { Label } from '../../../../../../../bpl-tools/Components';
+import { renderControl } from '../../../../../utils/functions';
 
 
-
-const CardTag = ({ attributes, setAttributes, }) => {
+const CardTag = ({ attributes, setAttributes, premiumProps = {}, isProTheme = false }) => {
     const { cardTag = {} } = attributes || {};
     const { text = "Card Tag", isSet = true } = cardTag || {};
 
+    const controlBase = {
+        isProTheme,
+        premiumProps,
+    };
 
     return (
         <PanelBody
@@ -20,30 +24,34 @@ const CardTag = ({ attributes, setAttributes, }) => {
                     {__("Show Card Tag", "cards-layout")}
                 </Label>
 
-                <ToggleControl
-                    checked={isSet}
-                    onChange={(value) =>
-                        setAttributes({
-                            cardTag: { ...cardTag, isSet: value },
-                        })
+                {/* 1. Wrapped ToggleControl */}
+                {renderControl({
+                    ...controlBase,
+                    Component: ToggleControl,
+                    props: {
+                        checked: isSet,
+                        onChange: (value) =>
+                            setAttributes({
+                                cardTag: { ...cardTag, isSet: value },
+                            }),
                     }
-                />
-
-
-
+                })}
             </PanelRow>
 
-            <TextControl
-                className="mt10"
-                label={__("Card Tag Text", "cards-layout")}
-                value={text}
-                onChange={(value) =>
-                    setAttributes({
-                        cardTag: { ...cardTag, text: value },
-                    })
+            {/* 2. Wrapped TextControl */}
+            {renderControl({
+                ...controlBase,
+                Component: TextControl,
+                props: {
+                    className: 'mt10',
+                    label: __("Text", "cards-layout"),
+                    value: text,
+                    onChange: (value) =>
+                        setAttributes({
+                            cardTag: { ...cardTag, text: value },
+                        }),
                 }
-            />
-
+            })}
         </PanelBody>
     );
 };

@@ -1,10 +1,10 @@
-import defaultImg from "../../../../assets/images/card-1.jpg";
+import { getCardImageUrl } from "../../../utils/common";
 
 const Default = ({ card }) => {
   const { img, title, desc, btnLabel, btnUrl, newTab, focalPoint } = card;
 
   const style = {
-    backgroundImage: `url(${img?.url || defaultImg})`,
+    backgroundImage: `url(${getCardImageUrl(img)})`,
     backgroundPosition: `${(focalPoint?.x || 0.5) * 100}% ${
       (focalPoint?.y || 0.5) * 100
     }%`,

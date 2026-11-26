@@ -3,3 +3,5 @@ logs
 violation.md
 latest-aduit-report.md
 audit.md
+dist
+dist.config.json

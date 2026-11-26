@@ -3,11 +3,12 @@ import { useState } from "@wordpress/element";
 import { __ } from "@wordpress/i18n";
 const ThemeSwitcher = ({
   themes = [],
+  isPro = false,
   isTooltip = false,
   visibleCount = 5,
   value = "default",
-  buttonLabel = "More Themes",
-  onChange = () => { },
+  buttonLabel = __("More Layouts", "cards-layout"),
+  onChange = () => {},
 }) => {
   const [open, setOpen] = useState(false);
   const visibleThemes = themes?.slice(0, visibleCount);
@@ -18,14 +19,26 @@ const ThemeSwitcher = ({
   };
   const ThemeButton = ({ theme }) => {
     const isActive = value === theme?.value;
+    // Pro badges only exist in the Pro build; the free build lists free layouts only.
+    const isLocked = PHCLB_PRO && theme?.isPro && !isPro;
 
     return (
       <Tooltip text={isTooltip ? theme?.tooltip : null}>
         <Button
           className={`bpl_theme_picker-btn ${isActive ? "active" : ""}`}
           onClick={() => handleSelect(theme?.value)}
+          disabled={false} // keep clickable if you want up sell
         >
           <span>{theme?.label}</span>
+          {isLocked && (
+            <span
+              className={`bpl_theme_picker-btn-labelPro ${
+                isActive ? "active" : ""
+              }`}
+            >
+              Pro
+            </span>
+          )}
         </Button>
       </Tooltip>
     );
@@ -51,7 +64,7 @@ const ThemeSwitcher = ({
             onClick={() => setOpen((prev) => !prev)}
             style={{ marginLeft: "1em" }}
           >
-            {__(buttonLabel, "cards-layout")}
+            {buttonLabel}
           </Button>
 
           {open && (
@@ -65,12 +78,16 @@ const ThemeSwitcher = ({
               <div className="bpl_theme_picker_popover-grid">
                 {existingThemes?.map((theme) => {
                   const isActive = value === theme?.value;
+                  const isLocked = PHCLB_PRO && !isPro && theme?.isPro;
 
                   return (
                     <div
                       key={theme?.value}
-                      className={`theme-card ${isActive ? "active" : ""}`}
+                      className={`theme-card ${isActive ? "active" : ""} ${
+                        isLocked ? "locked" : ""
+                      }`}
                       onClick={() => {
+                        // if (isLocked) return; // keep clickable if you want up sell
                         handleSelect(theme?.value);
                         setOpen(false);
                       }}
@@ -82,6 +99,11 @@ const ThemeSwitcher = ({
 
                       <span className="theme-name">
                         {theme?.label}
+                        {isLocked && (
+                          <span className="pro-tag">
+                            <Dashicon size={10} icon="lock" />
+                          </span>
+                        )}
                       </span>
                     </div>
                   );
